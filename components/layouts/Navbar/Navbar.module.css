@@ -74,3 +74,10 @@
   /* ¡El efecto apachurrado al dar clic! Se hace más chiquito */
   transform: scale(0.92); 
 }
+
+/* ASEGURAR que el menu de desktop esté oculto en móvil */
+@media (max-width: 768px) {
+  .navbarLinks {
+    display: none !important;
+  }
+}
