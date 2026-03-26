@@ -1,0 +1,142 @@
+{
+  "Laravel": {
+    "icon": "logos:laravel",
+    "bg": "bg-red-500/10",
+    "text": "text-red-400",
+    "border": "border-red-500/20",
+    "hoverBg": "group-hover:bg-red-500/20"
+  },
+  "Bootstrap": {
+    "icon": "logos:bootstrap",
+    "bg": "bg-purple-600/10",
+    "text": "text-purple-500",
+    "border": "border-purple-600/20",
+    "hoverBg": "group-hover:bg-purple-600/20"
+  },
+  "QZ Tray": {
+    "image": "/images/icons/qz-tray.png",
+    "bg": "bg-gray-500/10",
+    "text": "text-gray-300",
+    "border": "border-gray-500/20",
+    "hoverBg": "group-hover:bg-gray-500/20"
+  },
+  "PHP": {
+    "icon": "logos:php",
+    "bg": "bg-indigo-500/10",
+    "text": "text-indigo-400",
+    "border": "border-indigo-500/20",
+    "hoverBg": "group-hover:bg-indigo-500/20"
+  },
+  "MySQL": {
+    "icon": "logos:mysql",
+    "bg": "bg-blue-500/10",
+    "text": "text-blue-400",
+    "border": "border-blue-500/20",
+    "hoverBg": "group-hover:bg-blue-500/20"
+  },
+  "Roles": {
+    "icon": "mdi:shield-account-outline",
+    "bg": "bg-gray-500/10",
+    "text": "text-gray-400",
+    "border": "border-gray-500/20",
+    "hoverBg": "group-hover:bg-gray-500/20"
+  },
+  "Vue 3": {
+    "icon": "logos:vue",
+    "bg": "bg-emerald-500/10",
+    "text": "text-emerald-400",
+    "border": "border-emerald-500/20",
+    "hoverBg": "group-hover:bg-emerald-500/20"
+  },
+  "Vite": {
+    "icon": "logos:vitejs",
+    "bg": "bg-purple-500/10",
+    "text": "text-purple-400",
+    "border": "border-purple-500/20",
+    "hoverBg": "group-hover:bg-purple-500/20"
+  },
+  "Tailwind": {
+    "icon": "logos:tailwindcss-icon",
+    "bg": "bg-cyan-500/10",
+    "text": "text-cyan-400",
+    "border": "border-cyan-500/20",
+    "hoverBg": "group-hover:bg-cyan-500/20"
+  },
+  "PrimeVue": {
+    "icon": "simple-icons:primevue",
+    "bg": "bg-green-500/10",
+    "text": "text-green-400",
+    "border": "border-green-500/20",
+    "hoverBg": "group-hover:bg-green-500/20"
+  },
+  "Element Plus": {
+    "icon": "ep:element-plus",
+    "bg": "bg-blue-400/10",
+    "text": "text-blue-300",
+    "border": "border-blue-400/20",
+    "hoverBg": "group-hover:bg-blue-400/20"
+  },
+  "Pinia": {
+    "icon": "logos:pinia",
+    "bg": "bg-yellow-400/10",
+    "text": "text-yellow-300",
+    "border": "border-yellow-400/20",
+    "hoverBg": "group-hover:bg-yellow-400/20"
+  },
+  "Flowbite": {
+    "icon": "flowbite:flowbite-solid",
+    "bg": "bg-blue-600/10",
+    "text": "text-blue-400",
+    "border": "border-blue-600/20",
+    "hoverBg": "group-hover:bg-blue-600/20"
+  },
+  "Axios": {
+    "icon": "logos:axios",
+    "bg": "bg-indigo-400/10",
+    "text": "text-indigo-300",
+    "border": "border-indigo-400/20",
+    "hoverBg": "group-hover:bg-indigo-400/20"
+  },
+  "Flutter": {
+    "icon": "logos:flutter",
+    "bg": "bg-cyan-400/10",
+    "text": "text-cyan-300",
+    "border": "border-cyan-400/20",
+    "hoverBg": "group-hover:bg-cyan-400/20"
+  },
+  "Tauri": {
+    "icon": "logos:tauri",
+    "bg": "bg-orange-400/10",
+    "text": "text-orange-300",
+    "border": "border-orange-400/20",
+    "hoverBg": "group-hover:bg-orange-400/20"
+  },
+  "Amazon Lightsail": {
+    "icon": "devicon:amazonwebservices",
+    "bg": "bg-orange-500/10",
+    "text": "text-orange-500",
+    "border": "border-orange-500/20",
+    "hoverBg": "group-hover:bg-orange-500/20"
+  },
+  "Twilio": {
+    "icon": "devicon:twilio",
+    "bg": "bg-red-500/10",
+    "text": "text-red-500",
+    "border": "border-red-500/20",
+    "hoverBg": "group-hover:bg-red-500/20"
+  },
+  "PWA": {
+    "icon": "logos:pwa",
+    "bg": "bg-indigo-500/10",
+    "text": "text-indigo-400",
+    "border": "border-indigo-500/20",
+    "hoverBg": "group-hover:bg-indigo-500/20"
+  },
+  "Laragon": {
+    "icon": "simple-icons:laragon",
+    "bg": "bg-sky-400/10",
+    "text": "text-sky-300",
+    "border": "border-sky-400/20",
+    "hoverBg": "group-hover:bg-sky-400/20"
+  }
+}

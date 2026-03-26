@@ -1,0 +1,235 @@
+[
+  {
+    "id": "gym-project-fit",
+    "title": "Sistema para la Gestión del Gimnasio Project Fit",
+    "subtitle": "Tuxtla Gutiérrez, Chiapas",
+    "date": "Diciembre 2025 – Presente",
+    "status": "En Curso",
+    "description": "Ecosistema completo que conecta un panel administrador para entrenadores, app móvil para clientes y punto de venta.",
+    "features": [
+      "Panel de administración web para usuarios, métricas financieras y suscripciones.",
+      "App multiplataforma móvil (Flutter y Dart) para clientes consulten rutinas y videos.",
+      "Punto de Venta de escritorio nativo renderizando Vue 3 a través del motor Rust (Tauri).",
+      "Integración planificada con dispositivo físico (torniquete) para automatizar accesos."
+    ],
+    "tags": [
+      "Flutter",
+      "Tauri",
+      "Vue 3",
+      "Tailwind",
+      "Laravel",
+      "PrimeVue",
+      "Laragon",
+      "MySQL"
+    ],
+    "previewImage": "/images/proyectos/project-fit/portada.png",
+    "gallery": [],
+    "color": "from-black/40 to-yellow-500/20",
+    "border": "group-hover:border-yellow-500/50"
+  },
+  {
+    "id": "erp-mueblerias",
+    "title": "Sistema ERP Multi-Empresa",
+    "subtitle": "Mueblerías (Corporativo)",
+    "date": "Diciembre 2025 – Presente",
+    "status": "En Curso",
+    "description": "Potente plataforma ERP escalable para control de inventarios, recursos y ventas en una red de diferentes sucursales comerciales.",
+    "features": [
+      "Arquitectura modular basada en pestañas (Tabs) con lazy loading para máximo rendimiento.",
+      "Captura ágil de stock en almacén e inventarios con cámara de móvil o escaner láser.",
+      "Flujo completo: Entradas, Salidas, Traspasos y Kardex con actualización de precios en tiempo real.",
+      "Integración de operaciones multicompañía segura administrada mediante API Laravel y Pinia."
+    ],
+    "tags": [
+      "Vue 3",
+      "Flowbite",
+      "Tailwind",
+      "Laravel",
+      "Pinia",
+      "Axios",
+      "PWA",
+      "Laragon"
+    ],
+    "previewImage": "/images/proyectos/mueblerias/portada.png",
+    "gallery": [],
+    "color": "from-red-500/20 to-orange-500/20",
+    "border": "group-hover:border-red-500/50"
+  },
+  {
+    "id": "tablero-estrategico",
+    "title": "Sistema Integral del Tablero Estratégico de Control (SITEC)",
+    "subtitle": "Secretaría de Finanzas, Chiapas",
+    "date": "Septiembre 2025 – Diciembre 2025",
+    "status": "Concluido",
+    "description": "Plataforma gubernamental SPA para la planeación estratégica y el registro de metas institucionales a largo plazo.",
+    "features": [
+      "Desarrollo de SPA con Vue 3, Vite y componentes de la librería de PrimeVue para el frontend.",
+      "Integración de sistema de semaforización para monitorear objetivos y riesgos.",
+      "Integración de API RESTful con Laravel para el manejo de datos.",
+      "Creación de catálogos paramétricos y módulos de control por sexenios y roles.",
+      "Generación de reportes directivos y análisis de datos."
+    ],
+    "tags": [
+      "Vue 3",
+      "PrimeVue",
+      "Tailwind",
+      "Laravel",
+      "Vite",
+      "Pinia",
+      "Axios",
+      "MySQL",
+      "Laragon"
+    ],
+    "previewImage": "/images/proyectos/sitec/portada.png",
+    "gallery": [
+      {
+        "url": "/images/proyectos/sitec/inicio.png",
+        "caption": "Pantalla principal del panel de administración."
+      },
+      {
+        "url": "/images/proyectos/sitec/formulario.png",
+        "caption": "Formulario de registro de indicadores."
+      },
+      {
+        "url": "/images/proyectos/sitec/auditoria.png",
+        "caption": "Auditoría de indicadores."
+      },
+      {
+        "url": "/images/proyectos/sitec/excel.mp4",
+        "caption": "Video demostrativo del registro de indicadores por excel."
+      },
+      {
+        "url": "/images/proyectos/sitec/estratificaciones.png",
+        "caption": "Gestión de estratificaciones anuales y sexenales."
+      },
+      {
+        "url": "/images/proyectos/sitec/reporte.png",
+        "caption": "Generación de reportes."
+      }
+    ],
+    "color": "from-[#009885]/20 to-[#C90166]/20",
+    "border": "group-hover:border-[#009885]/50"
+  },
+  {
+    "id": "estetica-ciam-bela",
+    "title": "Sistema de Gestión Ciam Bela Hair Salón",
+    "subtitle": "Tuxtla Gutiérrez, Chiapas",
+    "date": "Enero 2025 – Septiembre 2025",
+    "status": "Concluido",
+    "description": "Software integral administrativo para la gestión de servicios,productos y citas de un salón de belleza, lectura de códigos de barras y métricas de desempeño, además de un sistema de recordatorios de citas por SMS.",
+    "features": [
+      "Interfaces para el cliente y panel de administración usando componentes de Element Plus.",
+      "Integración de gráficas métricas con Echarts y reportes exportables a Excel.",
+      "Lectura de códigos de barras en móviles para la gestión de inventario.",
+      "Consumo de API RESTful con Laravel y manejo de estado reactivo global con Pinia.",
+      "Sistema de notificaciones por SMS para recordatorios de citas."
+    ],
+    "tags": [
+      "Vue 3",
+      "QZ Tray",
+      "Element Plus",
+      "Tailwind",
+      "Pinia",
+      "Axios",
+      "Amazon Lightsail",
+      "Twilio",
+      "Laravel",
+      "PWA",
+      "Laragon",
+      "MySQL"
+    ],
+    "previewImage": "/images/proyectos/ciam-bela/portada.png",
+    "link": "https://www.ciambelahairsalon.com/",
+    "gallery": [
+      {
+        "url": "/images/proyectos/ciam-bela/admin/inicio.png",
+        "caption": "Pantalla principal del panel de administración."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/admin/citas.png",
+        "caption": "Gestión de citas."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/admin/almacenes.png",
+        "caption": "Gestión de productos por almacén."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/admin/camara.mp4",
+        "caption": "Video demostrativo de la lectura de códigos de barras en móviles."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/admin/venta.png",
+        "caption": "Módulo de ventas."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/admin/ticket.png",
+        "caption": "Vista previa del ticket de venta."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/cliente/inicio.png",
+        "caption": "Pantalla principal del panel de cliente."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/cliente/servicios.png",
+        "caption": "Listado de servicios."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/cliente/productos.png",
+        "caption": "Listado de productos."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/cliente/detalle_producto.png",
+        "caption": "Pantalla de detalle de producto."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/cliente/contacto.png",
+        "caption": "Pantalla de contacto de la estética."
+      }
+    ],
+    "color": "from-blue-500/20 via-sky-400/20 to-white/20",
+    "border": "group-hover:border-sky-400/50"
+  },
+  {
+    "id": "plataforma-incubadora",
+    "title": "Plataforma Incubadora de Proyectos",
+    "subtitle": "TecNM Campus Tuxtla Gutiérrez",
+    "date": "Enero 2023 – Enero 2024",
+    "status": "Concluido",
+    "description": "Sistema web enfocado en registrar, administrar y dar seguimiento ágil a proyectos de estudiantes del TecNM Campus Tuxtla Gutiérrez en fase de incubación.",
+    "features": [
+      "Integración de gráficas estadísticas y reportes PDF personalizados.",
+      "Implementación de sistema de autenticación y permisos detallados.",
+      "Gestión de relaciones entre alumnos, asesores, mentores y empresas interesadas en invertir en algún proyecto."
+    ],
+    "tags": ["Laravel", "MySQL", "Bootstrap", "PHP", "Laragon"],
+    "previewImage": "/images/proyectos/incubadora/portada.png",
+    "gallery": [
+      {
+        "url": "/images/proyectos/incubadora/login.png",
+        "caption": "Inicio de sesión."
+      },
+      {
+        "url": "/images/proyectos/incubadora/inicio.png",
+        "caption": "Pantalla principal del sistema."
+      },
+      {
+        "url": "/images/proyectos/incubadora/participantes.png",
+        "caption": "Gestión de participantes de los proyectos."
+      },
+      {
+        "url": "/images/proyectos/incubadora/graficas.png",
+        "caption": "Gráficas estadísticas de la cantidad de alumnos con proyectos por carrera."
+      },
+      {
+        "url": "/images/proyectos/incubadora/propuestas.png",
+        "caption": "Propuestas de proyectos pendientes de aprobación."
+      },
+      {
+        "url": "/images/proyectos/incubadora/email.png",
+        "caption": "Notificaciones por correo electrónico sobre alguna propuesta de proyecto nueva."
+      }
+    ],
+    "color": "from-blue-500/20 to-red-500/20",
+    "border": "group-hover:border-blue-500/50"
+  }
+]
