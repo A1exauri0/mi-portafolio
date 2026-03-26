@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import BotonRedSocial from "../shared/BotonRedSocial";
+import redes from "../../data/redes-sociales.json";
 
 export default function HeroInicio() {
   return (
@@ -55,45 +57,15 @@ export default function HeroInicio() {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-4 items-center">
-          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
-            <Link
-              href="https://www.linkedin.com/in/adrián-vázquez-7a665b185"
-              target="_blank"
-              className="p-2 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity"
-              aria-label="LinkedIn"
-            >
-              <Icon icon="devicon:linkedin" width="32" height="32" />
-            </Link>
-          </motion.div>
-          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
-            <Link
-              href="https://github.com/A1exauri0"
-              target="_blank"
-              className="p-2 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity"
-              aria-label="GitHub"
-            >
-              <Icon icon="skill-icons:github-light" width="32" height="32" />
-            </Link>
-          </motion.div>
-          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
-            <Link
-              href="https://www.instagram.com/adrianv.dev/"
-              target="_blank"
-              className="p-2 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity"
-              aria-label="Instagram"
-            >
-              <Icon icon="skill-icons:instagram" width="32" height="32" />
-            </Link>
-          </motion.div>
-          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
-            <Link
-              href="https://wa.me/529612326716?text=Hola,%20quisiera%20información%20sobre%20sus%20servicios%20para%20desarrollo%20de%20páginas%20web%20y%20aplicaciones." target="_blank"
-              className="p-2 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity"
-              aria-label="WhatsApp"
-            >
-              <Icon icon="logos:whatsapp-icon" width="32" height="32" />
-            </Link>
-          </motion.div>
+          {redes.map((red) => (
+            <BotonRedSocial 
+              key={red.nombre}
+              nombre={red.nombre}
+              url={red.url}
+              icono={red.icono}
+              color={red.color}
+            />
+          ))}
         </div>
       </motion.div>
     </section>

@@ -7,10 +7,9 @@ import Link from "next/link";
 import Image from "next/image";
 // Framer Motion
 import { motion, AnimatePresence } from "framer-motion";
+import BotonNavegacion from "../../shared/BotonNavegacion";
 
 export default function Navbar() {
-    // Guardamos sobre que boton esta el mouse
-    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const [isOpen, setIsOpen] = useState(false);
 
     // Links de la barra de navegacion
@@ -67,36 +66,13 @@ export default function Navbar() {
 
             {/* Desktop Links */}
             <ul className="hidden md:flex list-none gap-2 m-0 p-0 relative">
-                {/* Recorremos los links */}
-                {navLinks.map((link, index) => (
-                    // Guardamos el indice del boton sobre el que esta el mouse
-                    <li
-                        key={link.name}
-                        className="relative z-10 px-5 py-2 flex items-center justify-center"
-                        // Cuando el mouse entra en el boton, guardamos el indice
-                        onMouseEnter={() => setHoveredIndex(index)}
-                        // Cuando el mouse sale del boton, guardamos null
-                        onMouseLeave={() => setHoveredIndex(null)}>
-                        {/* Si el mouse esta sobre ese boton, renderiza el fondo magico blanco*/}
-                        {hoveredIndex === index && (
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                className="absolute inset-0 bg-white rounded-full -z-10"
-                                transition={{ duration: 0.2 }}
-                            />
-                        )}
-                        {/* Cambiar color del texto cuando el mouse esta sobre el boton */}
-                        <Link 
-                            href={link.path} 
-                            className={`text-base font-semibold transition-all duration-300 hover:scale-110 active:scale-95 ${
-                                hoveredIndex === index ? "text-black" : "text-white/90"
-                            }`}
-                        >
-                            {link.name}
-                        </Link>
-                    </li>
+                {navLinks.map((link) => (
+                    <BotonNavegacion 
+                        key={link.name} 
+                        nombre={link.name} 
+                        path={link.path} 
+                        variant="desktop"
+                    />
                 ))}
             </ul>
 
@@ -135,15 +111,13 @@ export default function Navbar() {
                     >
                         <ul className="flex flex-col px-6 py-4 gap-4">
                             {navLinks.map((link) => (
-                                <li key={link.name}>
-                                    <Link 
-                                        href={link.path} 
-                                        className="block text-lg font-medium text-white/80 hover:text-white transition-colors py-2"
-                                        onClick={() => setIsOpen(false)}
-                                    >
-                                        {link.name}
-                                    </Link>
-                                </li>
+                                <BotonNavegacion 
+                                    key={link.name} 
+                                    nombre={link.name} 
+                                    path={link.path} 
+                                    variant="mobile"
+                                    onClick={() => setIsOpen(false)}
+                                />
                             ))}
                         </ul>
                     </motion.div>

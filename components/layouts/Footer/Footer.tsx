@@ -3,39 +3,8 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
-
-const socialLinks = [
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/adrián-vázquez-7a665b185",
-    icon: "devicon:linkedin",
-    color: "hover:text-blue-500"
-  },
-  {
-    name: "GitHub",
-    href: "https://github.com/A1exauri0",
-    icon: "skill-icons:github-light",
-    color: "hover:text-gray-400"
-  },
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/adrianv.dev/",
-    icon: "skill-icons:instagram",
-    color: "hover:text-pink-500"
-  },
-  {
-    name: "WhatsApp",
-    href: "https://wa.me/529612326716?text=Hola,%20quisiera%20información%20sobre%20sus%20servicios%20para%20desarrollo%20de%20páginas%20web%20y%20aplicaciones.",
-    icon: "logos:whatsapp-icon",
-    color: "hover:text-green-500"
-  },
-  {
-    name: "Gmail",
-    href: "mailto:adrianvazquez3006@outlook.com",
-    icon: "logos:google-gmail",
-    color: "hover:text-red-500"
-  }
-];
+import BotonRedSocial from "../../shared/BotonRedSocial";
+import redes from "../../../data/redes-sociales.json";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -61,22 +30,15 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-end gap-6">
           <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-gray-500">Conéctate conmigo</h3>
           <div className="flex items-center gap-6">
-            {socialLinks.map((social) => (
-              <motion.div
-                key={social.name}
-                whileHover={{ scale: 1.2, y: -4 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Link
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`text-gray-400 transition-colors duration-300 ${social.color}`}
-                  aria-label={social.name}
-                >
-                  <Icon icon={social.icon} width="28" height="28" />
-                </Link>
-              </motion.div>
+            {redes.map((social) => (
+              <BotonRedSocial 
+                key={social.nombre}
+                nombre={social.nombre}
+                url={social.url}
+                icono={social.icono}
+                color={social.color}
+                size={28}
+              />
             ))}
           </div>
         </div>

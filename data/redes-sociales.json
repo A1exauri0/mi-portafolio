@@ -1,0 +1,32 @@
+[
+  {
+    "nombre": "LinkedIn",
+    "url": "https://www.linkedin.com/in/adrián-vázquez-7a665b185",
+    "icono": "devicon:linkedin",
+    "color": "hover:text-blue-500"
+  },
+  {
+    "nombre": "GitHub",
+    "url": "https://github.com/A1exauri0",
+    "icono": "skill-icons:github-light",
+    "color": "hover:text-gray-400"
+  },
+  {
+    "nombre": "Instagram",
+    "url": "https://www.instagram.com/adrianv.dev/",
+    "icono": "skill-icons:instagram",
+    "color": "hover:text-pink-500"
+  },
+  {
+    "nombre": "WhatsApp",
+    "url": "https://wa.me/529612326716?text=Hola,%20quisiera%20información%20sobre%20sus%20servicios%20para%20desarrollo%20de%20páginas%20web%20y%20aplicaciones.",
+    "icono": "logos:whatsapp-icon",
+    "color": "hover:text-green-500"
+  },
+  {
+    "nombre": "Gmail",
+    "url": "mailto:adrianvazquez3006@outlook.com",
+    "icono": "logos:google-gmail",
+    "color": "hover:text-red-500"
+  }
+]
