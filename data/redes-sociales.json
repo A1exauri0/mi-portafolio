@@ -24,9 +24,9 @@
     "color": "hover:text-green-500"
   },
   {
-    "nombre": "Gmail",
+    "nombre": "Outlook",
     "url": "mailto:adrianvazquez3006@outlook.com",
-    "icono": "logos:google-gmail",
-    "color": "hover:text-red-500"
+    "icono": "fluent-color:mail-28",
+    "color": "text-blue-500"
   }
 ]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "titulo": "Inteligencia Artificial y Productividad",
+    "emisor": "Google",
+    "fecha": "Completado",
+    "imagen": "/images/certificates/santander.png",
+    "descripcion": "Aprendizaje sobre la aplicación de IA para optimizar flujos de trabajo y mejorar la productividad profesional."
+  },
+  {
+    "id": 2,
+    "titulo": "JavaScript Essentials 1",
+    "emisor": "Cisco",
+    "fecha": "Completado",
+    "imagen": "/images/certificates/javascript.png",
+    "descripcion": "Fundamentos esenciales de programación en JavaScript, incluyendo lógica, tipos de datos y estructuras de control."
+  },
+  {
+    "id": 3,
+    "titulo": "Aspectos básicos: Datos, datos, en todas partes",
+    "emisor": "Coursera / Google",
+    "fecha": "Completado",
+    "imagen": "/images/certificates/coursera.png",
+    "descripcion": "Introducción al análisis de datos y la toma de decisiones basada en información estructurada."
+  },
+  {
+    "id": 4,
+    "titulo": "GitHub Copilot",
+    "emisor": "GitHub",
+    "fecha": "Completado",
+    "imagen": "/images/certificates/copilot.png",
+    "descripcion": "Dominio de herramientas de IA para el desarrollo de software colaborativo y eficiente."
+  },
+  {
+    "id": 5,
+    "titulo": "Vue 3 de cero a experto",
+    "emisor": "Udemy",
+    "fecha": "Completado",
+    "imagen": "/images/certificates/vue.png",
+    "descripcion": "Curso sobre el framework Vue.js, cubriendo Composition API, Pinia, Routing y Reactividad."
+  }
+]

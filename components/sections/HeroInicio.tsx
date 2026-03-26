@@ -44,7 +44,7 @@ export default function HeroInicio() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
       >
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight mb-8">
-          Hola, soy Adrián Vázquez.
+          Hola, soy <span className="text-purple-500">Adrián Vázquez</span>.
         </h1>
 
         <div className="space-y-5 text-gray-300 text-lg md:text-xl leading-relaxed max-w-xl">
