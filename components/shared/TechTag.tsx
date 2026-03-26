@@ -24,7 +24,7 @@ export default function TechTag({ name, size = "sm" }: TechTagProps) {
   const imgSize = size === "lg" ? 20 : 14;
 
   return (
-    <span className={`inline-flex items-center gap-1.5 font-medium border rounded-lg transition-colors duration-300 ${sizeClasses} ${config.bg} ${config.text} ${config.border} ${config.hoverBg} group-hover:text-white`}>
+    <span className={`group inline-flex items-center gap-1.5 font-medium border rounded-lg transition-all duration-300 ${sizeClasses} ${config.bg} ${config.text} ${config.border} ${config.hoverBg} group-hover:text-white hover:scale-105 active:scale-95 cursor-default`}>
       {config.image ? (
         <Image src={config.image} alt={name} width={imgSize} height={imgSize} className="object-contain" />
       ) : (

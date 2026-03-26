@@ -5,8 +5,6 @@ import { useState } from "react";
 // Next
 import Link from "next/link";
 import Image from "next/image";
-// Styles
-import styles from "./Navbar.module.css";
 // Framer Motion
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -50,8 +48,8 @@ export default function Navbar() {
     };
 
     return (
-        <nav className={styles.navbar}>
-            <div className={`${styles.navbarLogo} relative z-50 mt-3 md:mt-0`}>
+        <nav className="fixed top-0 left-0 w-full flex justify-between items-center px-8 md:px-16 py-4 z-[1000] bg-linear-to-b from-black/90 to-transparent backdrop-blur-[2px]">
+            <div className="relative z-50 mt-3 md:mt-0">
                 <Link href="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
                     <div className="w-10 h-10 rounded-full overflow-hidden border border-white/20 shrink-0 flex items-center justify-center">
                         <Image 
@@ -68,13 +66,13 @@ export default function Navbar() {
             </div>
 
             {/* Desktop Links */}
-            <ul className={`${styles.navbarLinks} hidden md:flex`}>
+            <ul className="hidden md:flex list-none gap-2 m-0 p-0 relative">
                 {/* Recorremos los links */}
                 {navLinks.map((link, index) => (
                     // Guardamos el indice del boton sobre el que esta el mouse
                     <li
                         key={link.name}
-                        className={styles.navItem}
+                        className="relative z-10 px-5 py-2 flex items-center justify-center"
                         // Cuando el mouse entra en el boton, guardamos el indice
                         onMouseEnter={() => setHoveredIndex(index)}
                         // Cuando el mouse sale del boton, guardamos null
@@ -82,17 +80,20 @@ export default function Navbar() {
                         {/* Si el mouse esta sobre ese boton, renderiza el fondo magico blanco*/}
                         {hoveredIndex === index && (
                             <motion.div
-                                layoutId="pill"
-                                className={styles.hoverBackground}
-                                transition={{
-                                    type: "spring",
-                                    bounce: 0.2,
-                                    duration: 0.6,
-                                }}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                className="absolute inset-0 bg-white rounded-full -z-10"
+                                transition={{ duration: 0.2 }}
                             />
                         )}
                         {/* Cambiar color del texto cuando el mouse esta sobre el boton */}
-                        <Link href={link.path} style={{ color: hoveredIndex === index ? "black" : "white" }}>
+                        <Link 
+                            href={link.path} 
+                            className={`text-base font-semibold transition-all duration-300 hover:scale-110 active:scale-95 ${
+                                hoveredIndex === index ? "text-black" : "text-white/90"
+                            }`}
+                        >
                             {link.name}
                         </Link>
                     </li>
