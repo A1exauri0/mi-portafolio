@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
-import BotonRedSocial from "../shared/BotonRedSocial";
-import redes from "../../data/redes-sociales.json";
+import BotonRedSocial from "@/components/shared/BotonRedSocial";
+import redes from "@/data/redes-sociales.json";
 
 export default function HeroInicio() {
   return (

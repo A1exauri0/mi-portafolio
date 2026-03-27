@@ -1,4 +1,4 @@
-import ProyectosDestacados from "@/components/sections/ProyectosDestacados";
+import ProyectosDestacados from "@/components/sections/home/ProyectosDestacados";
 
 export const metadata = {
   title: "Proyectos | Adrián Vázquez",

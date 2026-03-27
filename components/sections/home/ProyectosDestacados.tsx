@@ -3,9 +3,9 @@
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import proyectos from "../../data/proyectos.json";
-import TechTag from "../shared/TechTag";
-import EtiquetaEstadoProyecto from "../shared/EtiquetaEstadoProyecto";
+import proyectos from "@/data/proyectos.json";
+import TechTag from "@/components/shared/TechTag";
+import EtiquetaEstadoProyecto from "@/components/shared/EtiquetaEstadoProyecto";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },

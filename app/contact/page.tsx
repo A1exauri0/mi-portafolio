@@ -1,4 +1,4 @@
-import FormularioContacto from "@/components/sections/FormularioContacto";
+import FormularioContacto from "@/components/sections/contact/FormularioContacto";
 
 export const metadata = {
   title: "Contacto | Adrián Vázquez",

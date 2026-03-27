@@ -1,9 +1,9 @@
-import SobreHero from "../../components/sections/about/SobreHero";
-import SobreHabilidades from "../../components/sections/about/SobreHabilidades";
-import SobreTrayectoria from "../../components/sections/about/SobreTrayectoria";
-import SobreCertificados from "../../components/sections/about/SobreCertificados";
-import SobreGustos from "../../components/sections/about/SobreGustos";
-import ScrollToTop from "../../components/shared/ScrollToTop";
+import SobreHero from "@/components/sections/about/SobreHero";
+import SobreHabilidades from "@/components/sections/about/SobreHabilidades";
+import SobreTrayectoria from "@/components/sections/about/SobreTrayectoria";
+import SobreCertificados from "@/components/sections/about/SobreCertificados";
+import SobreGustos from "@/components/sections/about/SobreGustos";
+import ScrollToTop from "@/components/shared/ScrollToTop";
 
 export const metadata = {
   title: "Sobre mí | Adrián Vázquez",

@@ -1,5 +1,5 @@
-import HeroInicio from "@/components/sections/HeroInicio";
-import ProyectosDestacados from "@/components/sections/ProyectosDestacados";
+import HeroInicio from "@/components/sections/home/HeroInicio";
+import ProyectosDestacados from "@/components/sections/home/ProyectosDestacados";
 
 export const metadata = {
   title: "Portafolio | Adrián Vázquez",
