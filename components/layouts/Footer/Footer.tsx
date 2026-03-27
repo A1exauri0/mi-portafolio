@@ -19,7 +19,7 @@ export default function Footer() {
         {/* Lado Izquierdo: Branding/Nombre */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <Link href="/" className="text-2xl font-bold tracking-tighter text-white mb-2">
-            Adrián Vázquez<span className="text-purple-500">.</span>
+            Adrián<span className="text-purple-500">  Vázquez.</span>
           </Link>
           <p className="text-gray-400 font-light max-w-xs">
             Desarrollador Full Stack apasionado por construir soluciones digitales excepcionales.
@@ -31,7 +31,7 @@ export default function Footer() {
           <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-gray-500">Conéctate conmigo</h3>
           <div className="flex items-center gap-6">
             {redes.map((social) => (
-              <BotonRedSocial 
+              <BotonRedSocial
                 key={social.nombre}
                 nombre={social.nombre}
                 url={social.url}

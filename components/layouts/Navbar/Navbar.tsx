@@ -24,7 +24,7 @@ export default function Navbar() {
         },
         {
             name: "Proyectos",
-            path: "/projects",
+            path: "/proyectos",
         },
         {
             name: "Contacto",
@@ -51,26 +51,26 @@ export default function Navbar() {
             <div className="relative z-50 mt-3 md:mt-0">
                 <Link href="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
                     <div className="w-10 h-10 rounded-full overflow-hidden border border-white/20 shrink-0 flex items-center justify-center">
-                        <Image 
-                            src="/mi-foto.png" 
-                            alt="Adrián Vázquez" 
-                            width={40} 
-                            height={40} 
+                        <Image
+                            src="/mi-foto.png"
+                            alt="Adrián Vázquez"
+                            width={40}
+                            height={40}
                             className="w-full h-full object-cover"
                             unoptimized
                         />
                     </div>
-                    <span className="font-semibold text-white tracking-wide">Adrián Vázquez</span>
+                    <span className="font-semibold text-white tracking-wide">Adrián<span className="text-purple-500"> Vázquez</span></span>
                 </Link>
             </div>
 
             {/* Desktop Links */}
             <ul className="hidden md:flex list-none gap-2 m-0 p-0 relative">
                 {navLinks.map((link) => (
-                    <BotonNavegacion 
-                        key={link.name} 
-                        nombre={link.name} 
-                        path={link.path} 
+                    <BotonNavegacion
+                        key={link.name}
+                        nombre={link.name}
+                        path={link.path}
                         variant="desktop"
                     />
                 ))}
@@ -111,10 +111,10 @@ export default function Navbar() {
                     >
                         <ul className="flex flex-col px-6 py-4 gap-4">
                             {navLinks.map((link) => (
-                                <BotonNavegacion 
-                                    key={link.name} 
-                                    nombre={link.name} 
-                                    path={link.path} 
+                                <BotonNavegacion
+                                    key={link.name}
+                                    nombre={link.name}
+                                    path={link.path}
                                     variant="mobile"
                                     onClick={() => setIsOpen(false)}
                                 />

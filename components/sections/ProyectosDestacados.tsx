@@ -22,9 +22,22 @@ const itemVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, type: "spring", stiffness: 100 } }
 };
 
-export default function ProyectosDestacados() {
+interface ProyectosDestacadosProps {
+  limit?: number;
+  showAllButton?: boolean;
+  isFullPage?: boolean;
+}
+
+export default function ProyectosDestacados({ 
+  limit, 
+  showAllButton = false, 
+  isFullPage = false 
+}: ProyectosDestacadosProps) {
+  const displayedProjects = limit ? proyectos.slice(0, limit) : proyectos;
+  const hasMore = limit ? proyectos.length > limit : false;
+
   return (
-    <section id="proyectos" className="py-24 px-6 max-w-7xl mx-auto relative w-full text-white">
+    <section id="proyectos" className={`py-24 px-6 max-w-7xl mx-auto relative w-full text-white ${isFullPage ? 'pt-32' : ''}`}>
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -33,10 +46,12 @@ export default function ProyectosDestacados() {
         className="mb-16 text-center"
       >
         <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
-          Proyectos Destacados
+          {isFullPage ? "Todos mis Proyectos" : "Proyectos Destacados"}
         </h2>
         <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-          Una selección de mis trabajos recientes. Haz clic en cada uno para ver más detalles.
+          {isFullPage 
+            ? "Explora la lista completa de mis trabajos y colaboraciones."
+            : "Una selección de mis trabajos recientes. Haz clic en cada uno para ver más detalles."}
         </p>
       </motion.div>
 
@@ -47,7 +62,7 @@ export default function ProyectosDestacados() {
         viewport={{ once: true, margin: "-50px" }}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
       >
-        {proyectos.map((project, index) => (
+        {displayedProjects.map((project, index) => (
           <motion.div key={project.id} variants={itemVariants} className="h-full">
             <Link href={`/proyectos/${project.id}`} className="block h-full">
               <div className={`group relative bg-[#111] rounded-3xl border border-white/5 p-6 h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_-15px_rgba(0,0,0,0.5)] overflow-hidden ${project.border}`}>
@@ -113,6 +128,30 @@ export default function ProyectosDestacados() {
           </motion.div>
         ))}
       </motion.div>
+
+      {showAllButton && hasMore && (
+        <motion.div 
+          className="mt-16 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          <Link 
+            href="/proyectos"
+            className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white px-8 py-4 rounded-full border border-white/10 transition-all duration-300 font-medium group"
+          >
+            Ver todos los proyectos
+            <svg 
+              className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+        </motion.div>
+      )}
     </section>
   );
 }

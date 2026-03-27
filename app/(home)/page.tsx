@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="bg-[#050505] min-h-screen text-white overflow-hidden flex flex-col items-center w-full">
       <HeroInicio />
-      <ProyectosDestacados />
+      <ProyectosDestacados limit={6} showAllButton={true} />
     </main>
   );
 }
