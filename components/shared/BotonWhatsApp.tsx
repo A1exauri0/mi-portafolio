@@ -41,6 +41,7 @@ export default function BotonWhatsApp() {
             src="/images/icons/whatsapp.png"
             alt="WhatsApp"
             fill
+            sizes="64px"
             className="object-cover"
             style={{ transform: 'scale(1.1)' }}
             priority
