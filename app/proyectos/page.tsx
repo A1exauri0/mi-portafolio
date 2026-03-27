@@ -1,9 +1,6 @@
-import ProyectosDestacados from "@/components/sections/home/ProyectosDestacados";
+"use client";
 
-export const metadata = {
-  title: "Proyectos | Adrián Vázquez",
-  description: "Listado completo de proyectos y colaboraciones de Adrián Vázquez",
-};
+import ProyectosDestacados from "@/components/sections/home/ProyectosDestacados";
 
 export default function ProyectosPage() {
   return (

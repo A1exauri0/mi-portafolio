@@ -8,29 +8,24 @@ import Image from "next/image";
 // Framer Motion
 import { motion, AnimatePresence } from "framer-motion";
 import BotonNavegacion from "@/components/shared/BotonNavegacion";
+import { useLanguage } from "@/components/providers/LanguageContext";
+import { Icon } from "@iconify/react";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const { locale, setLocale, t } = useLanguage();
 
     // Links de la barra de navegacion
     const navLinks = [
-        {
-            name: "Inicio",
-            path: "/",
-        },
-        {
-            name: "Sobre mí",
-            path: "/about",
-        },
-        {
-            name: "Proyectos",
-            path: "/proyectos",
-        },
-        {
-            name: "Contacto",
-            path: "/contact",
-        },
+        { name: t("nav.home"), path: "/" },
+        { name: t("nav.about"), path: "/about" },
+        { name: t("nav.projects"), path: "/proyectos" },
+        { name: t("nav.contact"), path: "/contact" },
     ];
+
+    const toggleLocale = () => {
+        setLocale(locale === "es" ? "en" : "es");
+    };
 
     // Variantes para el ícono de hamburguesa
     const topVariants = {
@@ -65,41 +60,77 @@ export default function Navbar() {
             </div>
 
             {/* Desktop Links */}
-            <ul className="hidden md:flex list-none gap-2 m-0 p-0 relative">
-                {navLinks.map((link) => (
-                    <BotonNavegacion
-                        key={link.name}
-                        nombre={link.name}
-                        path={link.path}
-                        variant="desktop"
+            <div className="hidden md:flex items-center gap-2">
+                <ul className="flex list-none gap-2 m-0 p-0 relative">
+                    {navLinks.map((link) => (
+                        <BotonNavegacion
+                            key={link.path}
+                            nombre={link.name}
+                            path={link.path}
+                            variant="desktop"
+                        />
+                    ))}
+                </ul>
+
+                {/* Language Toggle - Desktop */}
+                <motion.button
+                    onClick={toggleLocale}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="ml-4 flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:border-purple-500/40 hover:bg-white/10 transition-all duration-300 cursor-pointer"
+                    aria-label="Toggle language"
+                >
+                    <Icon
+                        icon={locale === "es" ? "twemoji:flag-mexico" : "twemoji:flag-united-states"}
+                        width={20}
+                        height={20}
                     />
-                ))}
-            </ul>
+                    <span className="text-xs font-bold text-white/70 uppercase tracking-wider">
+                        {locale === "es" ? "EN" : "ES"}
+                    </span>
+                </motion.button>
+            </div>
 
             {/* Botón Hamburguesa Mobile */}
-            <button
-                className="md:hidden relative z-50 w-8 h-8 flex flex-col justify-center items-center gap-[6px] focus:outline-none cursor-pointer"
-                onClick={() => setIsOpen(!isOpen)}
-                aria-label="Toggle Menu"
-            >
-                <motion.div
-                    variants={topVariants}
-                    animate={isOpen ? "open" : "closed"}
-                    className="w-6 h-[2px] bg-white rounded-full origin-center"
-                />
-                <motion.div
-                    variants={middleVariants}
-                    animate={isOpen ? "open" : "closed"}
-                    className="w-6 h-[2px] bg-white rounded-full"
-                />
-                <motion.div
-                    variants={bottomVariants}
-                    animate={isOpen ? "open" : "closed"}
-                    className="w-6 h-[2px] bg-white rounded-full origin-center"
-                />
-            </button>
+            <div className="md:hidden flex items-center gap-3">
+                {/* Language Toggle - Mobile */}
+                <motion.button
+                    onClick={toggleLocale}
+                    whileTap={{ scale: 0.9 }}
+                    className="relative z-50 flex items-center justify-center w-8 h-8 cursor-pointer"
+                    aria-label="Toggle language"
+                >
+                    <Icon
+                        icon={locale === "es" ? "twemoji:flag-mexico" : "twemoji:flag-united-states"}
+                        width={24}
+                        height={24}
+                    />
+                </motion.button>
 
-            {/* Menú Móvil Desplegable (Simple) */}
+                <button
+                    className="relative z-50 w-8 h-8 flex flex-col justify-center items-center gap-[6px] focus:outline-none cursor-pointer"
+                    onClick={() => setIsOpen(!isOpen)}
+                    aria-label="Toggle Menu"
+                >
+                    <motion.div
+                        variants={topVariants}
+                        animate={isOpen ? "open" : "closed"}
+                        className="w-6 h-[2px] bg-white rounded-full origin-center"
+                    />
+                    <motion.div
+                        variants={middleVariants}
+                        animate={isOpen ? "open" : "closed"}
+                        className="w-6 h-[2px] bg-white rounded-full"
+                    />
+                    <motion.div
+                        variants={bottomVariants}
+                        animate={isOpen ? "open" : "closed"}
+                        className="w-6 h-[2px] bg-white rounded-full origin-center"
+                    />
+                </button>
+            </div>
+
+            {/* Menú Móvil Desplegable */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -112,7 +143,7 @@ export default function Navbar() {
                         <ul className="flex flex-col px-6 py-4 gap-4">
                             {navLinks.map((link) => (
                                 <BotonNavegacion
-                                    key={link.name}
+                                    key={link.path}
                                     nombre={link.name}
                                     path={link.path}
                                     variant="mobile"

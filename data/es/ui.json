@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Adrián Vázquez",
+    "bio1": "Soy Ingeniero en Sistemas y desarrollador de software independiente.",
+    "bio2": "Me especializo en crear sistemas web y aplicaciones escalables para ayudar a empresas a resolver problemas y materializar sus ideas."
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "titleFull": "Todos mis Proyectos",
+    "subtitle": "Una selección de mis trabajos recientes. Haz clic en cada uno para ver más detalles.",
+    "subtitleFull": "Explora la lista completa de mis trabajos y colaboraciones.",
+    "viewAll": "Ver todos los proyectos",
+    "noImage": "[ Sin Portada ]",
+    "backToPortfolio": "Volver al portafolio",
+    "aboutProject": "Sobre el proyecto",
+    "techUsed": "Tecnologías Utilizadas",
+    "keyFeatures": "Características Clave",
+    "visitProject": "Visitar Proyecto"
+  },
+  "about": {
+    "heroGreeting": "Hola, soy",
+    "heroName": "Adrián Vázquez",
+    "heroDescription": "Un desarrollador <span>Full Stack</span> apasionado por la tecnología y los retos complejos. Me especializo en crear aplicaciones web escalables, intuitivas y con un enfoque obsesivo por los detalles y la experiencia de usuario.",
+    "heroDescriptionPlain": "Un desarrollador Full Stack apasionado por la tecnología y los retos complejos. Me especializo en crear aplicaciones web escalables, intuitivas y con un enfoque obsesivo por los detalles y la experiencia de usuario.",
+    "techStackTitle": "Stack Tecnológico",
+    "techStackSubtitle": "Todas las herramientas que domino y utilizo en mis proyectos.",
+    "trajectoryTitle": "Mi",
+    "trajectoryTitleHighlight": "Trayectoria",
+    "educationTitle": "Educación",
+    "experienceTitle": "Experiencia Profesional",
+    "careerType": "Carrera",
+    "socialServiceType": "Servicio Social",
+    "residencyType": "Residencia Profesional",
+    "freelancerType": "Freelancer",
+    "careerTitle": "Ingeniería en Sistemas Computacionales",
+    "careerInstitution": "Tecnológico Nacional de México - Campus Tuxtla Gutiérrez",
+    "careerPeriod": "Agosto 2021 – Diciembre 2026",
+    "careerDescription": "Egresado (Pendiente de Titulación). Especialidad en tecnologías web y móvil aplicadas al comercio electrónico.",
+    "certificatesTitle": "Mis",
+    "certificatesTitleHighlight": "Certificaciones",
+    "certificatesSubtitle": "Validación continua de mis conocimientos y compromiso con la excelencia profesional.",
+    "beyondCodeTitle": "Más allá del",
+    "beyondCodeHighlight": "código",
+    "aboutMe": "Sobre Mí",
+    "aboutMeSubtitle": "Conoce un poco más sobre mi experiencia y las herramientas que utilizo para transformar ideas en realidades digitales.",
+    "myTrajectory": "Mi Trayectoria",
+    "myTrajectoryDesc": "Soy un desarrollador Full Stack apasionado por construir interfaces atractivas y sistemas robustos. Me enfoco en crear soluciones eficientes, escalables y con una gran atención al detalle tanto en el frontend como en el backend. Disfruto resolviendo problemas complejos y aprendiendo nuevas tecnologías constantemente.",
+    "mainStack": "Stack Principal",
+    "focusPhilosophy": "Enfoque y Filosofía",
+    "focusPhilosophyDesc": "Creo en el desarrollo de software que no solo cumple con los requisitos técnicos, sino que también ofrece una experiencia de usuario excepcional. Cada línea de código es una oportunidad para optimizar, innovar y dejar una huella de calidad."
+  },
+  "hobbies": {
+    "faith": {
+      "title": "Mi Fe y Valores",
+      "subtitle": "El pilar de mi vida",
+      "description": "Como católico, mi fe es la brújula que guía mis acciones y decisiones. Los valores de integridad, servicio y perseverancia que aprendo en mi camino espiritual se reflejan en la dedicación y honestidad con la que abordo cada proyecto de software."
+    },
+    "gaming": {
+      "title": "Pasión por el Gaming",
+      "subtitle": "Estrategia y Acción",
+      "description": "Desde la estrategia meticulosa en Clash Royale y Clash of Clans hasta la adrenalina de Marvel Rivals y el legado legendario de Halo. Los videojuegos son para mí una forma de desafiar el pensamiento lógico y la coordinación en equipo."
+    },
+    "fitness": {
+      "title": "Estilo de Vida y Fitness",
+      "subtitle": "Disciplina y Energía",
+      "description": "El gimnasio no es solo ejercicio físico; es el motor que mantiene mi enfoque y disciplina al máximo. Entrenar a diario me ayuda a despejar la mente y fortalecer la determinación."
+    }
+  },
+  "contact": {
+    "title": "TRABAJEMOS",
+    "titleHighlight": "JUNTOS",
+    "subtitle": "¿Tienes un proyecto en mente? Cuéntame los detalles.",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Ej. Juan Pérez",
+    "emailLabel": "Correo Electrónico",
+    "emailPlaceholder": "tu@email.com",
+    "subjectLabel": "Asunto",
+    "subjectPlaceholder": "Ej. Desarrollo de Web App",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Describe brevemente tus necesidades...",
+    "submitButton": "ENVIAR MENSAJE",
+    "submitting": "PROCESANDO...",
+    "successTitle": "¡Mensaje Enviado!",
+    "successMessage": "Gracias por contactarme. Te responderé lo antes posible.",
+    "sendAnother": "Enviar otro mensaje"
+  },
+  "footer": {
+    "description": "Desarrollador Full Stack apasionado por construir soluciones digitales excepcionales.",
+    "connectTitle": "Conéctate conmigo",
+    "location": "Chiapas, México",
+    "role": "Full Stack Developer"
+  },
+  "whatsapp": {
+    "tooltip": "¡Contáctame!",
+    "message": "Hola,%20quisiera%20información%20sobre%20sus%20servicios%20para%20desarrollo%20de%20páginas%20web%20y%20aplicaciones.",
+    "ariaLabel": "Contactar por WhatsApp"
+  },
+  "status": {
+    "inProgress": "En Curso",
+    "completed": "Concluido"
+  },
+  "meta": {
+    "homeTitle": "Portafolio | Adrián Vázquez",
+    "homeDescription": "Desarrollador Full Stack Especialista",
+    "aboutTitle": "Sobre mí | Adrián Vázquez",
+    "aboutDescription": "Conoce más sobre mi trayectoria, habilidades y pasiones como desarrollador Full Stack.",
+    "contactTitle": "Contacto | Adrián Vázquez",
+    "contactDescription": "¿Tienes un proyecto en mente? Ponte en contacto conmigo y trabajemos juntos.",
+    "projectsTitle": "Proyectos | Adrián Vázquez",
+    "projectsDescription": "Listado completo de proyectos y colaboraciones de Adrián Vázquez"
+  },
+  "gallery": {
+    "close": "Cerrar",
+    "expandedImage": "Imagen ampliada"
+  }
+}

@@ -1,0 +1,235 @@
+[
+  {
+    "id": "gym-project-fit",
+    "title": "Gym Management System – Project Fit",
+    "subtitle": "Tuxtla Gutiérrez, Chiapas",
+    "date": "December 2025 – Present",
+    "status": "In Progress",
+    "description": "Complete ecosystem connecting an admin panel for trainers, a mobile app for clients, and a point-of-sale system.",
+    "features": [
+      "Web administration panel for users, financial metrics, and subscriptions.",
+      "Cross-platform mobile app (Flutter & Dart) for clients to check routines and videos.",
+      "Native desktop Point of Sale rendering Vue 3 through the Rust engine (Tauri).",
+      "Planned integration with a physical device (turnstile) to automate access."
+    ],
+    "tags": [
+      "Flutter",
+      "Tauri",
+      "Vue 3",
+      "Tailwind",
+      "Laravel",
+      "PrimeVue",
+      "Laragon",
+      "MySQL"
+    ],
+    "previewImage": "/images/proyectos/project-fit/portada.png",
+    "gallery": [],
+    "color": "from-black/40 to-yellow-500/20",
+    "border": "group-hover:border-yellow-500/50"
+  },
+  {
+    "id": "erp-mueblerias",
+    "title": "Multi-Company ERP System",
+    "subtitle": "Furniture Stores (Corporate)",
+    "date": "December 2025 – Present",
+    "status": "In Progress",
+    "description": "Powerful scalable ERP platform for inventory control, resource management, and sales across a network of commercial branches.",
+    "features": [
+      "Modular tab-based architecture with lazy loading for maximum performance.",
+      "Agile warehouse stock and inventory capture using mobile camera or laser scanner.",
+      "Complete flow: Entries, Exits, Transfers, and Kardex with real-time price updates.",
+      "Multi-company operations integration securely managed via Laravel API and Pinia."
+    ],
+    "tags": [
+      "Vue 3",
+      "Flowbite",
+      "Tailwind",
+      "Laravel",
+      "Pinia",
+      "Axios",
+      "PWA",
+      "Laragon"
+    ],
+    "previewImage": "/images/proyectos/mueblerias/portada.png",
+    "gallery": [],
+    "color": "from-red-500/20 to-orange-500/20",
+    "border": "group-hover:border-red-500/50"
+  },
+  {
+    "id": "tablero-estrategico",
+    "title": "Strategic Control Dashboard System (SITEC)",
+    "subtitle": "Ministry of Finance, Chiapas",
+    "date": "September 2025 – December 2025",
+    "status": "Completed",
+    "description": "Government SPA platform for strategic planning and long-term institutional goal tracking.",
+    "features": [
+      "SPA development with Vue 3, Vite, and PrimeVue component library for the frontend.",
+      "Traffic light system integration to monitor objectives and risks.",
+      "RESTful API integration with Laravel for data management.",
+      "Creation of parametric catalogs and control modules by six-year terms and roles.",
+      "Executive report generation and data analysis."
+    ],
+    "tags": [
+      "Vue 3",
+      "PrimeVue",
+      "Tailwind",
+      "Laravel",
+      "Vite",
+      "Pinia",
+      "Axios",
+      "MySQL",
+      "Laragon"
+    ],
+    "previewImage": "/images/proyectos/sitec/portada.png",
+    "gallery": [
+      {
+        "url": "/images/proyectos/sitec/inicio.png",
+        "caption": "Admin panel main screen."
+      },
+      {
+        "url": "/images/proyectos/sitec/formulario.png",
+        "caption": "Indicator registration form."
+      },
+      {
+        "url": "/images/proyectos/sitec/auditoria.png",
+        "caption": "Indicator audit."
+      },
+      {
+        "url": "/images/proyectos/sitec/excel.mp4",
+        "caption": "Demo video of indicator registration via Excel."
+      },
+      {
+        "url": "/images/proyectos/sitec/estratificaciones.png",
+        "caption": "Annual and six-year stratification management."
+      },
+      {
+        "url": "/images/proyectos/sitec/reporte.png",
+        "caption": "Report generation."
+      }
+    ],
+    "color": "from-[#009885]/20 to-[#C90166]/20",
+    "border": "group-hover:border-[#009885]/50"
+  },
+  {
+    "id": "estetica-ciam-bela",
+    "title": "Ciam Bela Hair Salon Management System",
+    "subtitle": "Tuxtla Gutiérrez, Chiapas",
+    "date": "January 2025 – September 2025",
+    "status": "Completed",
+    "description": "Comprehensive administrative software for managing services, products, and appointments at a beauty salon, with barcode scanning and performance metrics, plus an SMS appointment reminder system.",
+    "features": [
+      "Client-facing and admin panel interfaces using Element Plus components.",
+      "Metric chart integration with Echarts and exportable Excel reports.",
+      "Mobile barcode scanning for inventory management.",
+      "RESTful API consumption with Laravel and global reactive state management with Pinia.",
+      "SMS notification system for appointment reminders."
+    ],
+    "tags": [
+      "Vue 3",
+      "QZ Tray",
+      "Element Plus",
+      "Tailwind",
+      "Pinia",
+      "Axios",
+      "Amazon Lightsail",
+      "Twilio",
+      "Laravel",
+      "PWA",
+      "Laragon",
+      "MySQL"
+    ],
+    "previewImage": "/images/proyectos/ciam-bela/portada.png",
+    "link": "https://www.ciambelahairsalon.com/",
+    "gallery": [
+      {
+        "url": "/images/proyectos/ciam-bela/admin/inicio.png",
+        "caption": "Admin panel main screen."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/admin/citas.png",
+        "caption": "Appointment management."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/admin/almacenes.png",
+        "caption": "Product management by warehouse."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/admin/camara.mp4",
+        "caption": "Demo video of mobile barcode scanning."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/admin/venta.png",
+        "caption": "Sales module."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/admin/ticket.png",
+        "caption": "Sales ticket preview."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/cliente/inicio.png",
+        "caption": "Client panel main screen."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/cliente/servicios.png",
+        "caption": "Service listing."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/cliente/productos.png",
+        "caption": "Product listing."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/cliente/detalle_producto.png",
+        "caption": "Product detail screen."
+      },
+      {
+        "url": "/images/proyectos/ciam-bela/cliente/contacto.png",
+        "caption": "Salon contact screen."
+      }
+    ],
+    "color": "from-blue-500/20 via-sky-400/20 to-white/20",
+    "border": "group-hover:border-sky-400/50"
+  },
+  {
+    "id": "plataforma-incubadora",
+    "title": "Project Incubator Platform",
+    "subtitle": "TecNM Campus Tuxtla Gutiérrez",
+    "date": "January 2023 – January 2024",
+    "status": "Completed",
+    "description": "Web system focused on registering, managing, and providing agile tracking for student projects at TecNM Campus Tuxtla Gutiérrez during the incubation phase.",
+    "features": [
+      "Statistical chart integration and customized PDF reports.",
+      "Authentication system implementation with detailed permissions.",
+      "Relationship management between students, advisors, mentors, and companies interested in investing in projects."
+    ],
+    "tags": ["Laravel", "MySQL", "Bootstrap", "PHP", "Laragon"],
+    "previewImage": "/images/proyectos/incubadora/portada.png",
+    "gallery": [
+      {
+        "url": "/images/proyectos/incubadora/login.png",
+        "caption": "Login screen."
+      },
+      {
+        "url": "/images/proyectos/incubadora/inicio.png",
+        "caption": "System main screen."
+      },
+      {
+        "url": "/images/proyectos/incubadora/participantes.png",
+        "caption": "Project participant management."
+      },
+      {
+        "url": "/images/proyectos/incubadora/graficas.png",
+        "caption": "Statistical charts of students with projects by major."
+      },
+      {
+        "url": "/images/proyectos/incubadora/propuestas.png",
+        "caption": "Project proposals pending approval."
+      },
+      {
+        "url": "/images/proyectos/incubadora/email.png",
+        "caption": "Email notifications about new project proposals."
+      }
+    ],
+    "color": "from-blue-500/20 to-red-500/20",
+    "border": "group-hover:border-blue-500/50"
+  }
+]

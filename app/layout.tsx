@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layouts/Navbar/Navbar";
 import Footer from "@/components/layouts/Footer/Footer";
 import BotonWhatsApp from "@/components/shared/BotonWhatsApp";
+import { LanguageProvider } from "@/components/providers/LanguageContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portafolio",
-  description: "Portafolio de Adrian",
+  title: "Portafolio | Adrián Vázquez",
+  description: "Desarrollador Full Stack Especialista",
 };
 
 export default function RootLayout({
@@ -26,15 +27,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <body>
-        <Navbar />
-        <main style={{ marginTop: "80px" }}>
-          {children}
-        </main>
-        <Footer />
-        <BotonWhatsApp />
+        <LanguageProvider>
+          <Navbar />
+          <main style={{ marginTop: "80px" }}>
+            {children}
+          </main>
+          <Footer />
+          <BotonWhatsApp />
+        </LanguageProvider>
       </body>
     </html>
   );
 }
+

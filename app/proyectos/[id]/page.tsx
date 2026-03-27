@@ -1,21 +1,19 @@
+"use client";
+
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import proyectos from "@/data/proyectos.json";
+import { use } from "react";
 import TechTag from "@/components/shared/TechTag";
 import EtiquetaEstadoProyecto from "@/components/shared/EtiquetaEstadoProyecto";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 import ProjectFeatures from "@/components/sections/projects/ProjectFeatures";
 import ProjectGallery from "@/components/sections/projects/ProjectGallery";
+import { useLanguage } from "@/components/providers/LanguageContext";
 
-export async function generateStaticParams() {
-  return proyectos.map((project) => ({
-    id: project.id,
-  }));
-}
-
-export default async function ProyectoPage(props: { params: Promise<{ id: string }> }) {
-  const params = await props.params;
+export default function ProyectoPage(props: { params: Promise<{ id: string }> }) {
+  const params = use(props.params);
+  const { t, proyectos } = useLanguage();
   const project = proyectos.find((p) => p.id === params.id);
 
   if (!project) {
@@ -34,7 +32,7 @@ export default async function ProyectoPage(props: { params: Promise<{ id: string
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
-          Volver al portafolio
+          {t("projects.backToPortfolio")}
         </Link>
       </div>
 
@@ -68,7 +66,7 @@ export default async function ProyectoPage(props: { params: Promise<{ id: string
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-3.5 bg-white text-black font-bold rounded-full hover:scale-105 hover:bg-gray-100 hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] transition-all duration-300 group"
               >
-                <span>Visitar Proyecto</span>
+                <span>{t("projects.visitProject")}</span>
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
@@ -82,7 +80,7 @@ export default async function ProyectoPage(props: { params: Promise<{ id: string
           <div className="w-full relative mb-16 flex justify-center group pointer-events-none">
             <Image 
               src={project.previewImage} 
-              alt={`Pantalla del proyecto ${project.title}`}
+              alt={`${project.title}`}
               width={1600}
               height={900}
               priority
@@ -98,7 +96,7 @@ export default async function ProyectoPage(props: { params: Promise<{ id: string
                 <svg className="w-6 h-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                Sobre el proyecto
+                {t("projects.aboutProject")}
               </h3>
               <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-light mb-12">
                 {project.description}
@@ -109,7 +107,7 @@ export default async function ProyectoPage(props: { params: Promise<{ id: string
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
-                  Tecnologías Utilizadas
+                  {t("projects.techUsed")}
                 </h3>
                 <div className="flex flex-wrap gap-3">
                   {project.tags.map(tag => (
@@ -124,7 +122,7 @@ export default async function ProyectoPage(props: { params: Promise<{ id: string
                 <svg className="w-6 h-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
                 </svg>
-                Características Clave
+                {t("projects.keyFeatures")}
               </h3>
               <ProjectFeatures features={project.features} />
             </section>

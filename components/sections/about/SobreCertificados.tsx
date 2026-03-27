@@ -4,9 +4,10 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
-import certificados from "@/data/certificados.json";
+import { useLanguage } from "@/components/providers/LanguageContext";
 
 export default function SobreCertificados() {
+  const { t, certificados } = useLanguage();
   const [index, setIndex] = useState(0);
 
   const next = () => {
@@ -21,15 +22,15 @@ export default function SobreCertificados() {
     <section className="py-24 px-6 max-w-6xl mx-auto w-full overflow-hidden">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-          Mis <span className="text-purple-500">Certificaciones</span>
+          {t("about.certificatesTitle")} <span className="text-purple-500">{t("about.certificatesTitleHighlight")}</span>
         </h2>
         <p className="text-gray-400 font-light max-w-2xl mx-auto italic">
-          Validación continua de mis conocimientos y compromiso con la excelencia profesional.
+          {t("about.certificatesSubtitle")}
         </p>
       </div>
 
       <div className="relative group max-w-5xl mx-auto">
-        {/* Contenedor del Carrusel - Altura Reducida */}
+        {/* Contenedor del Carrusel */}
         <div className="relative h-[320px] md:h-[400px] w-full flex items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.div
@@ -40,7 +41,7 @@ export default function SobreCertificados() {
               transition={{ duration: 0.5, ease: "anticipate" }}
               className="absolute inset-0 flex flex-col md:flex-row items-center gap-8 md:gap-12 p-4"
             >
-              {/* Imagen del Certificado - Proporción Ajustada */}
+              {/* Imagen del Certificado */}
               <div className="w-full md:w-[45%] h-full relative group/img overflow-hidden rounded-2xl border border-white/5 shadow-xl bg-[#111]">
                 <Image
                   src={certificados[index].imagen}
@@ -61,7 +62,7 @@ export default function SobreCertificados() {
                   {certificados[index].titulo}
                 </h3>
                 <p className="text-gray-400 text-lg font-light leading-relaxed mb-8 italic">
-                  "{certificados[index].descripcion}"
+                  &quot;{certificados[index].descripcion}&quot;
                 </p>
                 
                 {/* Indicadores de posición */}
@@ -78,7 +79,7 @@ export default function SobreCertificados() {
           </AnimatePresence>
         </div>
 
-        {/* Controles de Navegación - Reposicionados y con efecto de click */}
+        {/* Controles de Navegación */}
         <motion.button
           onClick={prev}
           whileTap={{ scale: 0.9 }}

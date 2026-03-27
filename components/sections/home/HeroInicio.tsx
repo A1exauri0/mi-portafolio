@@ -6,8 +6,11 @@ import Image from "next/image";
 import { Icon } from "@iconify/react";
 import BotonRedSocial from "@/components/shared/BotonRedSocial";
 import redes from "@/data/redes-sociales.json";
+import { useLanguage } from "@/components/providers/LanguageContext";
 
 export default function HeroInicio() {
+  const { t } = useLanguage();
+
   return (
     <section className="min-h-[calc(100vh-80px)] pt-10 lg:pt-0 flex flex-col lg:flex-row items-center justify-between relative w-full px-6 lg:px-16 xl:px-24 mx-auto max-w-[1400px]">
 
@@ -27,7 +30,7 @@ export default function HeroInicio() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent z-10 lg:hidden pointer-events-none" />
         <Image
           src="/mi-foto.png"
-          alt="Adrián Vázquez - Desarrollador Full Stack"
+          alt="Adrián Vázquez - Full Stack Developer"
           fill
           unoptimized
           className="object-cover object-center"
@@ -44,16 +47,12 @@ export default function HeroInicio() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
       >
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight mb-8">
-          Hola, soy <span className="text-purple-500">Adrián Vázquez</span>.
+          {t("hero.greeting")} <span className="text-purple-500">{t("hero.name")}</span>.
         </h1>
 
         <div className="space-y-5 text-gray-300 text-lg md:text-xl leading-relaxed max-w-xl">
-          <p>
-            Soy Ingeniero en Sistemas y desarrollador de software independiente.
-          </p>
-          <p>
-            Me especializo en crear sistemas web y aplicaciones escalables para ayudar a empresas a resolver problemas y materializar sus ideas.
-          </p>
+          <p>{t("hero.bio1")}</p>
+          <p>{t("hero.bio2")}</p>
         </div>
 
         <div className="mt-10 flex flex-wrap gap-4 items-center">

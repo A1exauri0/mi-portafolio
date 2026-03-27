@@ -3,9 +3,9 @@
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import proyectos from "@/data/proyectos.json";
 import TechTag from "@/components/shared/TechTag";
 import EtiquetaEstadoProyecto from "@/components/shared/EtiquetaEstadoProyecto";
+import { useLanguage } from "@/components/providers/LanguageContext";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -33,6 +33,7 @@ export default function ProyectosDestacados({
   showAllButton = false, 
   isFullPage = false 
 }: ProyectosDestacadosProps) {
+  const { t, proyectos } = useLanguage();
   const displayedProjects = limit ? proyectos.slice(0, limit) : proyectos;
   const hasMore = limit ? proyectos.length > limit : false;
 
@@ -46,12 +47,10 @@ export default function ProyectosDestacados({
         className="mb-16 text-center"
       >
         <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
-          {isFullPage ? "Todos mis Proyectos" : "Proyectos Destacados"}
+          {isFullPage ? t("projects.titleFull") : t("projects.title")}
         </h2>
         <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-          {isFullPage 
-            ? "Explora la lista completa de mis trabajos y colaboraciones."
-            : "Una selección de mis trabajos recientes. Haz clic en cada uno para ver más detalles."}
+          {isFullPage ? t("projects.subtitleFull") : t("projects.subtitle")}
         </p>
       </motion.div>
 
@@ -85,7 +84,7 @@ export default function ProyectosDestacados({
                     {project.previewImage && project.previewImage !== "" ? (
                       <Image
                         src={project.previewImage}
-                        alt={`Vista previa del proyecto ${project.title}`}
+                        alt={`${project.title}`}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         priority={index < 3}
@@ -96,7 +95,7 @@ export default function ProyectosDestacados({
                         <svg className="w-8 h-8 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
-                        <span>[ Sin Portada ]</span>
+                        <span>{t("projects.noImage")}</span>
                       </div>
                     )}
                   </div>
@@ -140,7 +139,7 @@ export default function ProyectosDestacados({
             href="/proyectos"
             className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white px-8 py-4 rounded-full border border-white/10 transition-all duration-300 font-medium group"
           >
-            Ver todos los proyectos
+            {t("projects.viewAll")}
             <svg 
               className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" 
               fill="none" 

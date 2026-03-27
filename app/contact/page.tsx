@@ -1,9 +1,6 @@
-import FormularioContacto from "@/components/sections/contact/FormularioContacto";
+"use client";
 
-export const metadata = {
-  title: "Contacto | Adrián Vázquez",
-  description: "¿Tienes un proyecto en mente? Ponte en contacto conmigo y trabajemos juntos.",
-};
+import FormularioContacto from "@/components/sections/contact/FormularioContacto";
 
 export default function ContactPage() {
   return (

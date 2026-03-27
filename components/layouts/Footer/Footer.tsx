@@ -5,8 +5,10 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import BotonRedSocial from "@/components/shared/BotonRedSocial";
 import redes from "@/data/redes-sociales.json";
+import { useLanguage } from "@/components/providers/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -22,13 +24,13 @@ export default function Footer() {
             Adrián<span className="text-purple-500">  Vázquez.</span>
           </Link>
           <p className="text-gray-400 font-light max-w-xs">
-            Desarrollador Full Stack apasionado por construir soluciones digitales excepcionales.
+            {t("footer.description")}
           </p>
         </div>
 
         {/* Centro/Derecha: Redes Sociales */}
         <div className="flex flex-col items-center md:items-end gap-6">
-          <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-gray-500">Conéctate conmigo</h3>
+          <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-gray-500">{t("footer.connectTitle")}</h3>
           <div className="flex items-center gap-6">
             {redes.map((social) => (
               <BotonRedSocial
@@ -48,8 +50,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500 font-light">
         <p>© {currentYear} Adrián Vázquez.</p>
         <div className="flex gap-8">
-          <span className="hover:text-white transition-colors cursor-default">Chiapas, México</span>
-          <span className="hover:text-white transition-colors cursor-default">Full Stack Developer</span>
+          <span className="hover:text-white transition-colors cursor-default">{t("footer.location")}</span>
+          <span className="hover:text-white transition-colors cursor-default">{t("footer.role")}</span>
         </div>
       </div>
     </footer>

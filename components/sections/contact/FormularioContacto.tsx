@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { Icon } from "@iconify/react";
+import { useLanguage } from "@/components/providers/LanguageContext";
 
 const fieldVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -18,6 +19,7 @@ const fieldVariants: Variants = {
 };
 
 export default function FormularioContacto() {
+  const { t } = useLanguage();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -47,7 +49,7 @@ export default function FormularioContacto() {
       const result = await response.json();
 
       if (!response.ok) {
-        const errorMessage = result.error?.message || (typeof result.error === 'string' ? result.error : JSON.stringify(result.error)) || "Error al enviar el mensaje";
+        const errorMessage = result.error?.message || (typeof result.error === 'string' ? result.error : JSON.stringify(result.error)) || "Error";
         throw new Error(errorMessage);
       }
 
@@ -73,15 +75,15 @@ export default function FormularioContacto() {
             <div className="w-24 h-24 bg-[#a855f7]/20 rounded-full flex items-center justify-center mx-auto mb-8">
               <Icon icon="mdi:check-circle" className="text-6xl text-[#a855f7]" />
             </div>
-            <h3 className="text-3xl font-bold mb-4 text-white uppercase tracking-tighter">¡Mensaje Enviado!</h3>
+            <h3 className="text-3xl font-bold mb-4 text-white uppercase tracking-tighter">{t("contact.successTitle")}</h3>
             <p className="text-gray-400 mb-8 text-lg">
-              Gracias por contactarme. Te responderé lo antes posible.
+              {t("contact.successMessage")}
             </p>
             <button 
               onClick={() => setIsSubmitted(false)}
               className="relative z-10 cursor-pointer text-[#a855f7] hover:text-[#a855f7]/80 font-bold uppercase tracking-widest text-xs transition-colors"
             >
-              Enviar otro mensaje
+              {t("contact.sendAnother")}
             </button>
           </motion.div>
         ) : (
@@ -94,15 +96,15 @@ export default function FormularioContacto() {
             className="bg-[#111] border border-white/10 p-8 md:p-12 rounded-3xl w-full shadow-[0_20px_50px_-20px_rgba(0,0,0,0.5)]"
           >
             <div className="mb-12 text-center md:text-left">
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-4 italic tracking-tighter">TRABAJEMOS <span className="text-[#a855f7]">JUNTOS</span></h2>
-              <p className="text-gray-400 text-lg">¿Tienes un proyecto en mente? Cuéntame los detalles.</p>
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-4 italic tracking-tighter">{t("contact.title")} <span className="text-[#a855f7]">{t("contact.titleHighlight")}</span></h2>
+              <p className="text-gray-400 text-lg">{t("contact.subtitle")}</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Nombre */}
                 <motion.div custom={0} variants={fieldVariants} initial="hidden" animate="visible">
-                  <label htmlFor="nombre" className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 ml-1">Nombre</label>
+                  <label htmlFor="nombre" className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 ml-1">{t("contact.nameLabel")}</label>
                   <div className="relative group">
                     <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none text-gray-500 group-focus-within:text-[#a855f7] transition-colors">
                       <Icon icon="mdi:account-outline" className="text-xl" />
@@ -112,7 +114,7 @@ export default function FormularioContacto() {
                       name="nombre"
                       type="text" 
                       required
-                      placeholder="Ej. Juan Pérez"
+                      placeholder={t("contact.namePlaceholder")}
                       className="w-full bg-black/40 border border-white/5 rounded-2xl py-5 pl-14 pr-4 text-white placeholder:text-gray-700 focus:outline-none focus:border-[#a855f7]/50 focus:bg-black/60 transition-all duration-300"
                     />
                   </div>
@@ -120,7 +122,7 @@ export default function FormularioContacto() {
 
                 {/* Email */}
                 <motion.div custom={1} variants={fieldVariants} initial="hidden" animate="visible">
-                  <label htmlFor="email" className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 ml-1">Correo Electrónico</label>
+                  <label htmlFor="email" className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 ml-1">{t("contact.emailLabel")}</label>
                   <div className="relative group">
                     <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none text-gray-500 group-focus-within:text-[#a855f7] transition-colors">
                       <Icon icon="mdi:email-outline" className="text-xl" />
@@ -130,7 +132,7 @@ export default function FormularioContacto() {
                       name="email"
                       type="email" 
                       required
-                      placeholder="tu@email.com"
+                      placeholder={t("contact.emailPlaceholder")}
                       className="w-full bg-black/40 border border-white/5 rounded-2xl py-5 pl-14 pr-4 text-white placeholder:text-gray-700 focus:outline-none focus:border-[#a855f7]/50 focus:bg-black/60 transition-all duration-300"
                     />
                   </div>
@@ -139,7 +141,7 @@ export default function FormularioContacto() {
 
               {/* Asunto */}
               <motion.div custom={2} variants={fieldVariants} initial="hidden" animate="visible">
-                <label htmlFor="asunto" className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 ml-1">Asunto</label>
+                <label htmlFor="asunto" className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 ml-1">{t("contact.subjectLabel")}</label>
                 <div className="relative group">
                   <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none text-gray-500 group-focus-within:text-[#a855f7] transition-colors">
                     <Icon icon="mdi:bookmark-outline" className="text-xl" />
@@ -149,7 +151,7 @@ export default function FormularioContacto() {
                     name="asunto"
                     type="text" 
                     required
-                    placeholder="Ej. Desarrollo de Web App"
+                    placeholder={t("contact.subjectPlaceholder")}
                     className="w-full bg-black/40 border border-white/5 rounded-2xl py-5 pl-14 pr-4 text-white placeholder:text-gray-700 focus:outline-none focus:border-[#a855f7]/50 focus:bg-black/60 transition-all duration-300"
                   />
                 </div>
@@ -157,7 +159,7 @@ export default function FormularioContacto() {
 
               {/* Mensaje */}
               <motion.div custom={3} variants={fieldVariants} initial="hidden" animate="visible">
-                <label htmlFor="mensaje" className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 ml-1">Mensaje</label>
+                <label htmlFor="mensaje" className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 ml-1">{t("contact.messageLabel")}</label>
                 <div className="relative group">
                   <div className="absolute top-5 left-5 pointer-events-none text-gray-500 group-focus-within:text-[#a855f7] transition-colors">
                     <Icon icon="mdi:text-box-outline" className="text-xl" />
@@ -167,7 +169,7 @@ export default function FormularioContacto() {
                     name="mensaje"
                     rows={5}
                     required
-                    placeholder="Describe brevemente tus necesidades..."
+                    placeholder={t("contact.messagePlaceholder")}
                     className="w-full bg-black/40 border border-white/5 rounded-2xl py-5 pl-14 pr-4 text-white placeholder:text-gray-700 focus:outline-none focus:border-[#a855f7]/50 focus:bg-black/60 transition-all duration-300 resize-none"
                   />
                 </div>
@@ -194,11 +196,11 @@ export default function FormularioContacto() {
                   {loading ? (
                     <div className="flex items-center gap-2">
                       <Icon icon="mdi:loading" className="animate-spin text-2xl" />
-                      <span className="uppercase tracking-widest text-sm">PROCESANDO...</span>
+                      <span className="uppercase tracking-widest text-sm">{t("contact.submitting")}</span>
                     </div>
                   ) : (
                     <div className="flex items-center gap-2">
-                      <span className="uppercase tracking-widest text-md">ENVIAR MENSAJE</span>
+                      <span className="uppercase tracking-widest text-md">{t("contact.submitButton")}</span>
                       <Icon icon="mdi:arrow-right" className="text-2xl transition-transform duration-300 group-hover:translate-x-1" />
                     </div>
                   )}

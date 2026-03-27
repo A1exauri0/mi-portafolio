@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
-import proyectos from "@/data/proyectos.json";
+import { useLanguage } from "@/components/providers/LanguageContext";
 
 export default function SobreTrayectoria() {
+  const { t, proyectos } = useLanguage();
+
   // Encontrar proyectos específicos en el JSON
   const incubadora = proyectos.find(p => p.id === "plataforma-incubadora");
   const sitec = proyectos.find(p => p.id === "tablero-estrategico");
@@ -13,18 +15,18 @@ export default function SobreTrayectoria() {
 
   const secciones = [
     {
-      tituloPrincipal: "Educación",
+      tituloPrincipal: t("about.educationTitle"),
       items: [
         {
-          tipo: "Carrera",
-          titulo: "Ingeniería en Sistemas Computacionales",
-          institucion: "Tecnológico Nacional de México - Campus Tuxtla Gutiérrez",
-          periodo: "Agosto 2021 – Diciembre 2026",
-          descripcion: "Egresado (Pendiente de Titulación). Especialidad en tecnologías web y móvil aplicadas al comercio electrónico.",
+          tipo: t("about.careerType"),
+          titulo: t("about.careerTitle"),
+          institucion: t("about.careerInstitution"),
+          periodo: t("about.careerPeriod"),
+          descripcion: t("about.careerDescription"),
           icon: "material-symbols:school-outline"
         },
         {
-          tipo: "Servicio Social",
+          tipo: t("about.socialServiceType"),
           titulo: incubadora?.title || "Plataforma Incubadora",
           institucion: incubadora?.subtitle || "TecNM Campus Tuxtla Gutiérrez",
           periodo: incubadora?.date || "2023 - 2024",
@@ -33,7 +35,7 @@ export default function SobreTrayectoria() {
           href: `/proyectos/${incubadora?.id}`
         },
         {
-          tipo: "Residencia Profesional",
+          tipo: t("about.residencyType"),
           titulo: sitec?.title || "SITEC",
           institucion: sitec?.subtitle || "Secretaría de Finanzas, Chiapas",
           periodo: sitec?.date || "2025",
@@ -44,9 +46,9 @@ export default function SobreTrayectoria() {
       ]
     },
     {
-      tituloPrincipal: "Experiencia Profesional",
-      items: freelancers.map((f, i) => ({
-        tipo: "Freelancer",
+      tituloPrincipal: t("about.experienceTitle"),
+      items: freelancers.map((f) => ({
+        tipo: t("about.freelancerType"),
         titulo: f.title,
         institucion: f.subtitle || "Cliente Freelance",
         periodo: f.date || "",
@@ -59,7 +61,7 @@ export default function SobreTrayectoria() {
 
   return (
     <section className="py-20 px-6 max-w-5xl mx-auto w-full">
-      <h2 className="text-3xl md:text-5xl font-bold mb-20 text-center uppercase tracking-tight">Mi <span className="text-purple-500">Trayectoria</span></h2>
+      <h2 className="text-3xl md:text-5xl font-bold mb-20 text-center uppercase tracking-tight">{t("about.trajectoryTitle")} <span className="text-purple-500">{t("about.trajectoryTitleHighlight")}</span></h2>
 
       <div className="space-y-24">
         {secciones.map((seccion, idxSeccion) => (
@@ -88,7 +90,7 @@ export default function SobreTrayectoria() {
                       <Link
                         href={item.href}
                         className="absolute inset-0 z-20 cursor-pointer"
-                        title={`Ver detalles de ${item.titulo}`}
+                        title={`${item.titulo}`}
                       />
                     )}
 

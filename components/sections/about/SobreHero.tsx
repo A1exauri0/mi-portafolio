@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useLanguage } from "@/components/providers/LanguageContext";
 
 export default function SobreHero() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-20 flex flex-col items-center text-center px-6">
       <motion.div
@@ -27,7 +30,7 @@ export default function SobreHero() {
         transition={{ delay: 0.2 }}
         className="text-4xl md:text-6xl font-bold tracking-tighter mb-6"
       >
-        Hola, soy <span className="text-purple-500">Adrián Vázquez</span>
+        {t("about.heroGreeting")} <span className="text-purple-500">{t("about.heroName")}</span>
       </motion.h1>
 
       <motion.p 
@@ -36,9 +39,9 @@ export default function SobreHero() {
         transition={{ delay: 0.3 }}
         className="text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed font-light"
       >
-        Un desarrollador <span className="text-white font-medium">Full Stack</span> apasionado por la tecnología 
-        y los retos complejos. Me especializo en crear aplicaciones web escalables, intuitivas 
-        y con un enfoque obsesivo por los detalles y la experiencia de usuario.
+        {t("about.heroDescriptionPlain").split("Full Stack")[0]}
+        <span className="text-white font-medium">Full Stack</span>
+        {t("about.heroDescriptionPlain").split("Full Stack")[1]}
       </motion.p>
     </section>
   );

@@ -2,32 +2,35 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-
-const hobbies = [
-  {
-    titulo: "Mi Fe y Valores",
-    subtitulo: "El pilar de mi vida",
-    descripcion: "Como católico, mi fe es la brújula que guía mis acciones y decisiones. Los valores de integridad, servicio y perseverancia que aprendo en mi camino espiritual se reflejan en la dedicación y honestidad con la que abordo cada proyecto de software.",
-    imagen: "/images/hobbies/fe-catolica.png",
-    reverse: false
-  },
-  {
-    titulo: "Pasión por el Gaming",
-    subtitulo: "Estrategia y Acción",
-    descripcion: "Desde la estrategia meticulosa en Clash Royale y Clash of Clans hasta la adrenalina de Marvel Rivals y el legado legendario de Halo. Los videojuegos son para mí una forma de desafiar el pensamiento lógico y la coordinación en equipo.",
-    imagen: "/images/hobbies/games.png",
-    reverse: true
-  },
-  {
-    titulo: "Estilo de Vida y Fitness",
-    subtitulo: "Disciplina y Energía",
-    descripcion: "El gimnasio no es solo ejercicio físico; es el motor que mantiene mi enfoque y disciplina al máximo. Entrenar a diario me ayuda a despejar la mente y fortalecer la determinación.",
-    imagen: "/images/hobbies/gym.png",
-    reverse: false
-  }
-];
+import { useLanguage } from "@/components/providers/LanguageContext";
 
 export default function SobreGustos() {
+  const { t } = useLanguage();
+
+  const hobbies = [
+    {
+      titulo: t("hobbies.faith.title"),
+      subtitulo: t("hobbies.faith.subtitle"),
+      descripcion: t("hobbies.faith.description"),
+      imagen: "/images/hobbies/fe-catolica.png",
+      reverse: false
+    },
+    {
+      titulo: t("hobbies.gaming.title"),
+      subtitulo: t("hobbies.gaming.subtitle"),
+      descripcion: t("hobbies.gaming.description"),
+      imagen: "/images/hobbies/games.png",
+      reverse: true
+    },
+    {
+      titulo: t("hobbies.fitness.title"),
+      subtitulo: t("hobbies.fitness.subtitle"),
+      descripcion: t("hobbies.fitness.description"),
+      imagen: "/images/hobbies/gym.png",
+      reverse: false
+    }
+  ];
+
   return (
     <section className="py-24 px-6 max-w-7xl mx-auto w-full overflow-hidden">
       <motion.h2
@@ -36,7 +39,7 @@ export default function SobreGustos() {
         viewport={{ once: true }}
         className="text-3xl md:text-5xl font-bold mb-20 text-center tracking-tight"
       >
-        Más allá del <span className="text-purple-500">código</span>
+        {t("about.beyondCodeTitle")} <span className="text-purple-500">{t("about.beyondCodeHighlight")}</span>
       </motion.h2>
 
       <div className="space-y-32">

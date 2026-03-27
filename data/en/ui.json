@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Adrián Vázquez",
+    "bio1": "I'm a Systems Engineer and independent software developer.",
+    "bio2": "I specialize in building scalable web systems and applications to help businesses solve problems and bring their ideas to life."
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "titleFull": "All Projects",
+    "subtitle": "A selection of my recent work. Click on each one for more details.",
+    "subtitleFull": "Browse the full list of my work and collaborations.",
+    "viewAll": "View all projects",
+    "noImage": "[ No Cover ]",
+    "backToPortfolio": "Back to portfolio",
+    "aboutProject": "About the project",
+    "techUsed": "Technologies Used",
+    "keyFeatures": "Key Features",
+    "visitProject": "Visit Project"
+  },
+  "about": {
+    "heroGreeting": "Hi, I'm",
+    "heroName": "Adrián Vázquez",
+    "heroDescription": "A <span>Full Stack</span> developer passionate about technology and complex challenges. I specialize in building scalable, intuitive web applications with an obsessive focus on detail and user experience.",
+    "heroDescriptionPlain": "A Full Stack developer passionate about technology and complex challenges. I specialize in building scalable, intuitive web applications with an obsessive focus on detail and user experience.",
+    "techStackTitle": "Tech Stack",
+    "techStackSubtitle": "All the tools I master and use across my projects.",
+    "trajectoryTitle": "My",
+    "trajectoryTitleHighlight": "Journey",
+    "educationTitle": "Education",
+    "experienceTitle": "Professional Experience",
+    "careerType": "Degree",
+    "socialServiceType": "Social Service",
+    "residencyType": "Professional Residency",
+    "freelancerType": "Freelancer",
+    "careerTitle": "Computer Systems Engineering",
+    "careerInstitution": "Tecnológico Nacional de México - Campus Tuxtla Gutiérrez",
+    "careerPeriod": "August 2021 – December 2026",
+    "careerDescription": "Graduated (Pending Degree Certification). Specialization in web and mobile technologies applied to e-commerce.",
+    "certificatesTitle": "My",
+    "certificatesTitleHighlight": "Certifications",
+    "certificatesSubtitle": "Continuous validation of my knowledge and commitment to professional excellence.",
+    "beyondCodeTitle": "Beyond the",
+    "beyondCodeHighlight": "code",
+    "aboutMe": "About Me",
+    "aboutMeSubtitle": "Learn a little more about my experience and the tools I use to turn ideas into digital realities.",
+    "myTrajectory": "My Journey",
+    "myTrajectoryDesc": "I'm a Full Stack developer passionate about building attractive interfaces and robust systems. I focus on creating efficient, scalable solutions with great attention to detail in both frontend and backend. I enjoy solving complex problems and constantly learning new technologies.",
+    "mainStack": "Main Stack",
+    "focusPhilosophy": "Focus & Philosophy",
+    "focusPhilosophyDesc": "I believe in software development that not only meets technical requirements but also delivers an exceptional user experience. Every line of code is an opportunity to optimize, innovate, and leave a mark of quality."
+  },
+  "hobbies": {
+    "faith": {
+      "title": "My Faith & Values",
+      "subtitle": "The pillar of my life",
+      "description": "As a Catholic, my faith is the compass that guides my actions and decisions. The values of integrity, service, and perseverance I learn on my spiritual path are reflected in the dedication and honesty with which I approach every software project."
+    },
+    "gaming": {
+      "title": "Passion for Gaming",
+      "subtitle": "Strategy & Action",
+      "description": "From meticulous strategy in Clash Royale and Clash of Clans to the adrenaline of Marvel Rivals and the legendary legacy of Halo. Video games are for me a way to challenge logical thinking and team coordination."
+    },
+    "fitness": {
+      "title": "Lifestyle & Fitness",
+      "subtitle": "Discipline & Energy",
+      "description": "The gym isn't just physical exercise; it's the engine that keeps my focus and discipline at their peak. Training daily helps me clear my mind and strengthen my determination."
+    }
+  },
+  "contact": {
+    "title": "LET'S WORK",
+    "titleHighlight": "TOGETHER",
+    "subtitle": "Have a project in mind? Tell me the details.",
+    "nameLabel": "Name",
+    "namePlaceholder": "e.g. John Doe",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@email.com",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "e.g. Web App Development",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Briefly describe your needs...",
+    "submitButton": "SEND MESSAGE",
+    "submitting": "PROCESSING...",
+    "successTitle": "Message Sent!",
+    "successMessage": "Thank you for reaching out. I'll get back to you as soon as possible.",
+    "sendAnother": "Send another message"
+  },
+  "footer": {
+    "description": "Full Stack Developer passionate about building exceptional digital solutions.",
+    "connectTitle": "Connect with me",
+    "location": "Chiapas, Mexico",
+    "role": "Full Stack Developer"
+  },
+  "whatsapp": {
+    "tooltip": "Contact me!",
+    "message": "Hi,%20I'd%20like%20information%20about%20your%20web%20and%20app%20development%20services.",
+    "ariaLabel": "Contact via WhatsApp"
+  },
+  "status": {
+    "inProgress": "In Progress",
+    "completed": "Completed"
+  },
+  "meta": {
+    "homeTitle": "Portfolio | Adrián Vázquez",
+    "homeDescription": "Specialist Full Stack Developer",
+    "aboutTitle": "About | Adrián Vázquez",
+    "aboutDescription": "Learn more about my journey, skills, and passions as a Full Stack developer.",
+    "contactTitle": "Contact | Adrián Vázquez",
+    "contactDescription": "Have a project in mind? Get in touch and let's work together.",
+    "projectsTitle": "Projects | Adrián Vázquez",
+    "projectsDescription": "Full list of Adrián Vázquez's projects and collaborations"
+  },
+  "gallery": {
+    "close": "Close",
+    "expandedImage": "Expanded image"
+  }
+}
