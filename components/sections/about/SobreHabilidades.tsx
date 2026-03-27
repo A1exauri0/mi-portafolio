@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import TechTag from "../../shared/TechTag";
-import techMap from "../../../data/tech-tags.json";
+import TechTag from "@/components/shared/TechTag";
+import techMap from "@/data/tech-tags.json";
 
 export default function SobreHabilidades() {
   const allTags = Object.keys(techMap);

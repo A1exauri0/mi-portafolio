@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
-import proyectos from "../../../data/proyectos.json";
+import proyectos from "@/data/proyectos.json";
 
 export default function SobreTrayectoria() {
   // Encontrar proyectos específicos en el JSON

@@ -2,7 +2,7 @@
 
 import { Icon } from "@iconify/react";
 import Image from "next/image";
-import techMap from "../../data/tech-tags.json";
+import techMap from "@/data/tech-tags.json";
 
 interface TechTagProps {
   name: string;

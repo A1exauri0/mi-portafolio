@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import proyectos from "../../../data/proyectos.json";
-import TechTag from "../../../components/shared/TechTag";
-import EtiquetaEstadoProyecto from "../../../components/shared/EtiquetaEstadoProyecto";
-import ScrollToTop from "../../../components/shared/ScrollToTop";
-import ProjectFeatures from "../../../components/sections/projects/ProjectFeatures";
-import ProjectGallery from "../../../components/sections/ProjectGallery";
+import proyectos from "@/data/proyectos.json";
+import TechTag from "@/components/shared/TechTag";
+import EtiquetaEstadoProyecto from "@/components/shared/EtiquetaEstadoProyecto";
+import ScrollToTop from "@/components/shared/ScrollToTop";
+import ProjectFeatures from "@/components/sections/projects/ProjectFeatures";
+import ProjectGallery from "@/components/sections/projects/ProjectGallery";
 
 export async function generateStaticParams() {
   return proyectos.map((project) => ({

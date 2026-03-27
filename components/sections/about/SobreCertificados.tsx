@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
-import certificados from "../../../data/certificados.json";
+import certificados from "@/data/certificados.json";
 
 export default function SobreCertificados() {
   const [index, setIndex] = useState(0);

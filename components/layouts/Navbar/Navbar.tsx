@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 // Framer Motion
 import { motion, AnimatePresence } from "framer-motion";
-import BotonNavegacion from "../../shared/BotonNavegacion";
+import BotonNavegacion from "@/components/shared/BotonNavegacion";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
