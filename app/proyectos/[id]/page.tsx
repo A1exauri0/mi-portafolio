@@ -10,6 +10,7 @@ import ScrollToTop from "@/components/shared/ScrollToTop";
 import ProjectFeatures from "@/components/sections/projects/ProjectFeatures";
 import ProjectGallery from "@/components/sections/projects/ProjectGallery";
 import { useLanguage } from "@/components/providers/LanguageContext";
+import colaboradoresDic from "@/data/colaboradores.json";
 
 export default function ProyectoPage(props: { params: Promise<{ id: string }> }) {
   const params = use(props.params);
@@ -116,6 +117,41 @@ export default function ProyectoPage(props: { params: Promise<{ id: string }> })
                 </div>
               </div>
             </section>
+
+            {/* Sección de Colaboradores */}
+            {project.collaborators && project.collaborators.length > 0 && (
+              <section className="mb-16">
+                <h3 className="text-2xl font-bold mb-8 text-white flex items-center gap-3">
+                  <svg className="w-6 h-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  {t("projects.collaborators")}
+                </h3>
+                <div className={`grid gap-6 ${project.collaborators.length === 1 ? 'grid-cols-1 max-w-sm' : 'grid-cols-1 sm:grid-cols-2'}`}>
+                  {project.collaborators.map((collab: any, idx: number) => {
+                    const data = (colaboradoresDic as Record<string, {name: string, photo: string}>)[collab.id] 
+                      || { name: collab.id, photo: '' };
+                    return (
+                      <div key={idx} className="flex items-center gap-4 bg-[#111] border border-white/5 rounded-2xl p-5 hover:border-white/20 transition-colors">
+                        <div className="relative w-16 h-16 rounded-full overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 border border-white/10 flex-shrink-0">
+                          {data.photo ? (
+                            <Image src={data.photo} alt={data.name} fill className="object-cover" />
+                          ) : (
+                            <div className="absolute inset-0 flex items-center justify-center text-gray-500 font-bold text-2xl uppercase">
+                              {data.name.charAt(0)}
+                            </div>
+                          )}
+                        </div>
+                        <div>
+                          <h4 className="text-white font-medium text-lg">{data.name}</h4>
+                          <p className="text-gray-400 text-sm mt-1">{collab.role}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+            )}
 
             <section>
               <h3 className="text-2xl font-bold mb-8 text-white flex items-center gap-3">

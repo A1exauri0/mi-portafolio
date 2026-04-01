@@ -22,7 +22,11 @@
     "aboutProject": "About the project",
     "techUsed": "Technologies Used",
     "keyFeatures": "Key Features",
-    "visitProject": "Visit Project"
+    "visitProject": "Visit Project",
+    "collaborators": "Collaborators",
+    "viewCollaborators": "View Collaborators",
+    "role": "Role",
+    "collaboratorsTooltip": "View Team"
   },
   "about": {
     "heroGreeting": "Hi, I'm",

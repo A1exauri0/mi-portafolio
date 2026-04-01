@@ -1,10 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import TechTag from "@/components/shared/TechTag";
 import EtiquetaEstadoProyecto from "@/components/shared/EtiquetaEstadoProyecto";
+import ModalColaboradores from "@/components/shared/ModalColaboradores";
 import { useLanguage } from "@/components/providers/LanguageContext";
 
 const containerVariants: Variants = {
@@ -28,12 +30,14 @@ interface ProyectosDestacadosProps {
   isFullPage?: boolean;
 }
 
-export default function ProyectosDestacados({ 
-  limit, 
-  showAllButton = false, 
-  isFullPage = false 
+export default function ProyectosDestacados({
+  limit,
+  showAllButton = false,
+  isFullPage = false
 }: ProyectosDestacadosProps) {
   const { t, proyectos } = useLanguage();
+  const [modalProject, setModalProject] = useState<any | null>(null);
+
   const displayedProjects = limit ? proyectos.slice(0, limit) : proyectos;
   const hasMore = limit ? proyectos.length > limit : false;
 
@@ -73,8 +77,31 @@ export default function ProyectosDestacados({
                   {/* Espacio para la Imagen Principal */}
                   <div className="w-full h-48 bg-black/40 rounded-2xl mb-5 overflow-hidden border border-white/5 relative group-hover:border-white/10 transition-colors">
 
-                    {/* Etiqueta Visual de Estado */}
-                    <div className="absolute top-3 right-3 z-30">
+                    {/* Botones Flotantes Card */}
+                    <div className="absolute top-3 right-3 z-30 flex items-center gap-2">
+                      {project.collaborators && project.collaborators.length > 0 && (
+                        <div className="relative">
+                          <button
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              setModalProject(project);
+                            }}
+                            className="peer bg-black/50 hover:bg-black/80 text-white p-1.5 rounded-md backdrop-blur-md transition-all border border-white/10"
+                            aria-label={t("projects.collaboratorsTooltip") || "Ver Colaboradores"}
+                          >
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                          </button>
+
+                          {/* Tooltip Personalizado */}
+                          <div className="absolute top-full mt-1.5 right-0 px-2.5 py-1.5 bg-[#0a0a0a] border border-white/10 text-gray-300 text-[10px] font-medium uppercase tracking-wider whitespace-nowrap rounded-md opacity-0 peer-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50 shadow-2xl">
+                            {t("projects.collaboratorsTooltip") || "Ver Colaboradores"}
+                          </div>
+                        </div>
+                      )}
+
                       <EtiquetaEstadoProyecto
                         status={project.status as string}
                         className="px-2.5 py-1 text-[11px]"
@@ -129,21 +156,21 @@ export default function ProyectosDestacados({
       </motion.div>
 
       {showAllButton && hasMore && (
-        <motion.div 
+        <motion.div
           className="mt-16 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <Link 
+          <Link
             href="/proyectos"
             className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white px-8 py-4 rounded-full border border-white/10 transition-all duration-300 font-medium group"
           >
             {t("projects.viewAll")}
-            <svg 
-              className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" 
-              fill="none" 
-              viewBox="0 0 24 24" 
+            <svg
+              className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+              fill="none"
+              viewBox="0 0 24 24"
               stroke="currentColor"
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -151,6 +178,12 @@ export default function ProyectosDestacados({
           </Link>
         </motion.div>
       )}
+      {/* Modal de Colaboradores */}
+      <ModalColaboradores
+        isOpen={modalProject !== null}
+        onClose={() => setModalProject(null)}
+        colaboradores={modalProject?.collaborators || []}
+      />
     </section>
   );
 }
