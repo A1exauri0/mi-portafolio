@@ -54,6 +54,10 @@
     "gallery": [],
     "color": "from-red-500/20 to-orange-500/20",
     "border": "group-hover:border-red-500/50",
+    "beforeAfter": {
+      "before": "/images/proyectos/mueblerias/antes.png",
+      "after": "/images/proyectos/mueblerias/despues.png"
+    },
     "collaborators": [
       {
         "id": "1",
@@ -115,6 +119,10 @@
     ],
     "color": "from-[#009885]/20 to-[#C90166]/20",
     "border": "group-hover:border-[#009885]/50",
+    "beforeAfter": {
+      "before": "/images/proyectos/sitec/antes.png",
+      "after": "/images/proyectos/sitec/despues.png"
+    },
     "collaborators": [
       {
         "id": "1",
@@ -200,6 +208,10 @@
     ],
     "color": "from-blue-500/20 via-sky-400/20 to-white/20",
     "border": "group-hover:border-sky-400/50",
+    "beforeAfter": {
+      "before": "/images/proyectos/ciam-bela/antes.png",
+      "after": "/images/proyectos/ciam-bela/despues.png"
+    },
     "collaborators": [
       {
         "id": "1",

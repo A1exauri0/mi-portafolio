@@ -9,6 +9,7 @@ import EtiquetaEstadoProyecto from "@/components/shared/EtiquetaEstadoProyecto";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 import ProjectFeatures from "@/components/sections/projects/ProjectFeatures";
 import ProjectGallery from "@/components/sections/projects/ProjectGallery";
+import BeforeAfterSlider from "@/components/sections/projects/BeforeAfterSlider";
 import { useLanguage } from "@/components/providers/LanguageContext";
 import colaboradoresDic from "@/data/colaboradores.json";
 
@@ -117,6 +118,32 @@ export default function ProyectoPage(props: { params: Promise<{ id: string }> })
                 </div>
               </div>
             </section>
+
+            {/* Sección Antes y Después */}
+            {/* @ts-ignore */}
+            {project.beforeAfter && (
+              <section className="mt-16">
+                <h3 className="text-2xl font-bold mb-8 text-white flex items-center gap-3">
+                  <svg className="w-6 h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                  {t("projects.beforeAfter")}
+                </h3>
+                <div className="relative group">
+                  <BeforeAfterSlider 
+                    /* @ts-ignore */
+                    before={project.beforeAfter.before} 
+                    /* @ts-ignore */
+                    after={project.beforeAfter.after} 
+                    beforeLabel={t("projects.before")}
+                    afterLabel={t("projects.after")}
+                  />
+                  <p className="mt-4 text-center text-gray-500 text-sm italic">
+                    {t("projects.comparePrompt")}
+                  </p>
+                </div>
+              </section>
+            )}
 
             {/* Sección de Colaboradores */}
             {project.collaborators && project.collaborators.length > 0 && (

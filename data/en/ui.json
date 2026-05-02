@@ -26,7 +26,11 @@
     "collaborators": "Collaborators",
     "viewCollaborators": "View Collaborators",
     "role": "Role",
-    "collaboratorsTooltip": "View Team"
+    "collaboratorsTooltip": "View Team",
+    "beforeAfter": "Before and After",
+    "before": "Before",
+    "after": "After",
+    "comparePrompt": "Slide to compare"
   },
   "about": {
     "heroGreeting": "Hi, I'm",
